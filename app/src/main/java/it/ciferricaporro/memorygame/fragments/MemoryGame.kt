@@ -138,8 +138,4 @@ class MemoryGame : Fragment() {
         indexOfSelectedCarrd = null
         updateViews()
     }
-
-    private fun ind(){
-
-    }
 }
