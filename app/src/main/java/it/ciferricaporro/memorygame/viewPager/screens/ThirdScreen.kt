@@ -21,8 +21,8 @@ class ThirdScreen : Fragment() {
         val viewT = inflater.inflate(R.layout.fragment_third_screen, container, false)
 
         viewT.findViewById<TextView>(R.id.tvFinish).setOnClickListener {
-            val navToHome = ViewPagerFragmentDirections.actionViewPagerFragmentToMemoryGame()
-            Navigation.findNavController(viewT).navigate(navToHome)
+            val navToGame = ViewPagerFragmentDirections.actionViewPagerFragmentToMemoryGame()
+            Navigation.findNavController(viewT).navigate(navToGame)
             onTutFinished()
         }
 
