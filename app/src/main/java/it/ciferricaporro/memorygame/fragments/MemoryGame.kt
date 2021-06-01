@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import it.ciferricaporro.memorygame.R
 
 
-class memoryGame : Fragment() {
+class MemoryGame : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
