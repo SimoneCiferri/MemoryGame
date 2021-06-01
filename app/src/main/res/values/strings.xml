@@ -6,4 +6,7 @@
     <string name="finish">Finish</string>
     <string name="new_game">New Game</string>
     <string name="save_score">Save Score</string>
+    <string name="about">About</string>
+    <string name="game">Game</string>
+    <string name="scoreboard">Scoreboard</string>
 </resources>

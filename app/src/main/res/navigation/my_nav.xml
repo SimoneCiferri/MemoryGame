@@ -36,4 +36,14 @@
         android:name="it.ciferricaporro.memorygame.fragments.MemoryGame"
         android:label="fragment_memory_game"
         tools:layout="@layout/fragment_memory_game" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="it.ciferricaporro.memorygame.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/scoreboardFragment"
+        android:name="it.ciferricaporro.memorygame.fragments.ScoreboardFragment"
+        android:label="fragment_scoreboard"
+        tools:layout="@layout/fragment_scoreboard" />
 </navigation>

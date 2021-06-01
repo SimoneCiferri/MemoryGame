@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="home"
+    <item android:title="@string/game"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/nomeFirstFragment"/>
+        android:id="@+id/memoryGame"/>
 
-    <item android:title="profile"
+    <item android:title="@string/scoreboard"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/nomeSecondFragment"/>
+        android:id="@+id/scoreboardFragment"/>
 
-    <item android:title="settings"
+    <item android:title="@string/about"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/nomeThirdFragment"/>
+        android:id="@+id/aboutFragment"/>
 </menu>
