@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.view.isVisible
+import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
@@ -63,6 +64,11 @@ class MemoryGame : Fragment() {
 
         viewMG.findViewById<Button>(R.id.btnNewGame).setOnClickListener {
             newGame()
+        }
+
+        viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment()
+            Navigation.findNavController(viewMG).navigate(navToSave)
         }
 
     }

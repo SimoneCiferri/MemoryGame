@@ -35,7 +35,11 @@
         android:id="@+id/memoryGame"
         android:name="it.ciferricaporro.memorygame.fragments.MemoryGame"
         android:label="fragment_memory_game"
-        tools:layout="@layout/fragment_memory_game" />
+        tools:layout="@layout/fragment_memory_game" >
+        <action
+            android:id="@+id/action_memoryGame_to_saveScoreFragment"
+            app:destination="@id/saveScoreFragment" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="it.ciferricaporro.memorygame.fragments.AboutFragment"
@@ -46,4 +50,13 @@
         android:name="it.ciferricaporro.memorygame.fragments.ScoreboardFragment"
         android:label="fragment_scoreboard"
         tools:layout="@layout/fragment_scoreboard" />
+    <fragment
+        android:id="@+id/saveScoreFragment"
+        android:name="it.ciferricaporro.memorygame.fragments.SaveScoreFragment"
+        android:label="fragment_save_score"
+        tools:layout="@layout/fragment_save_score" >
+        <action
+            android:id="@+id/action_saveScoreFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
+    </fragment>
 </navigation>

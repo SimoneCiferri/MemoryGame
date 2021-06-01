@@ -10,7 +10,7 @@ data class User(
     val id: Int,
     val player: String,
     val time: Double,
-    val Data: Time,
+    //val Data: Time,
     val errors: Int
 )
 
