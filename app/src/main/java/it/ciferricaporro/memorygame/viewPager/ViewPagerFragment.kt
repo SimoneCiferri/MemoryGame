@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import it.ciferricaporro.memorygame.R
+import it.ciferricaporro.memorygame.viewPager.screens.FirstScreen
+import it.ciferricaporro.memorygame.viewPager.screens.SecondScreen
+import it.ciferricaporro.memorygame.viewPager.screens.ThirdScreen
 
 class ViewPagerFragment : Fragment() {
 
@@ -14,13 +17,12 @@ class ViewPagerFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val viewPF = inflater.inflate(R.layout.fragment_view_pager, container, false)
-        /*
-        val fragmenList = arrayListOf<Fragment>( FirstScreen(), SecondScreen(), ThirdScreen() )
 
-        val adapter = ViewPagerAdapter(fragmenList, requireActivity().supportFragmentManager, lifecycle)
+        val fragmentList = arrayListOf<Fragment>( FirstScreen(), SecondScreen(), ThirdScreen() )
+
+        val adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
 
         viewPF.findViewById<ViewPager2>(R.id.viewPager).adapter = adapter
-        */
         return viewPF
     }
 }

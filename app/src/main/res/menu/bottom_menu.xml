@@ -3,13 +3,13 @@
 
     <item android:title="home"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/firstFragment"/>
+        android:id="@+id/nomeFirstFragment"/>
 
     <item android:title="profile"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/secondFragment"/>
+        android:id="@+id/nomeSecondFragment"/>
 
     <item android:title="settings"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/thirdFragment"/>
+        android:id="@+id/nomeThirdFragment"/>
 </menu>
