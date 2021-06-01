@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
 
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
 
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@android:drawable/ic_menu_help"
+        android:src="@drawable/ic_baseline_help_outline_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,21 +110,11 @@
         android:id="@+id/btnNewGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/new_game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnSaveScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/save_score"
-        app:layout_constraintBottom_toTopOf="@+id/btnNewGame"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
 </androidx.constraintlayout.widget.ConstraintLayout>
