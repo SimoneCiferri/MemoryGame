@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     private fun setBottomNav(){
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
-
         bottomNavigationView.setupWithNavController(navController)
         bottomNavigationView.isVisible = false
         supportActionBar?.hide()
