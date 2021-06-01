@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.R
+import it.ciferricaporro.memorygame.viewPager.ViewPagerFragmentDirections
 
 class ThirdScreen : Fragment() {
 
@@ -17,15 +18,14 @@ class ThirdScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val viewT = inflater.inflate(R.layout.fragment_third_screen, container, false)
-/*
+
         viewT.findViewById<TextView>(R.id.tvFinish).setOnClickListener {
-            val navToHome = ViewPagerFragmentDirections.actionViewPagerFragmentToFirstFragment()
+            val navToHome = ViewPagerFragmentDirections.actionViewPagerFragmentToMemoryGame()
             Navigation.findNavController(viewT).navigate(navToHome)
             onTutFinished()
         }
- */
+
         return viewT
     }
 

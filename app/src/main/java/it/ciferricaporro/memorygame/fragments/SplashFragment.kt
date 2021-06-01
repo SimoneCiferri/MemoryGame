@@ -19,15 +19,8 @@ class SplashFragment : Fragment() {
     ): View? {
 
         Handler().postDelayed({
-                val navToTut = SplashFragmentDirections.actionSplashFragmentToViewPagerFragment()
-                findNavController().navigate(navToTut)
-        }, 3000)
-
-        // Inflate the layout for this fragment
-/*
-        Handler().postDelayed({
             if(checkIfTut()){
-                val navToFirst = SplashFragmentDirections.actionSplashFragmentToFirstFragment()
+                val navToFirst = SplashFragmentDirections.actionSplashFragmentToMemoryGame()
                 findNavController().navigate(navToFirst)
             }else{
                 val navToTut = SplashFragmentDirections.actionSplashFragmentToViewPagerFragment()
@@ -36,8 +29,7 @@ class SplashFragment : Fragment() {
 
 
         }, 3000)
-
- */
+        
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
