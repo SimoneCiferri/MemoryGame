@@ -18,6 +18,11 @@ class SplashFragment : Fragment() {
 
     ): View? {
 
+        Handler().postDelayed({
+                val navToTut = SplashFragmentDirections.actionSplashFragmentToViewPagerFragment()
+                findNavController().navigate(navToTut)
+        }, 3000)
+
         // Inflate the layout for this fragment
 /*
         Handler().postDelayed({
