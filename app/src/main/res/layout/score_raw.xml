@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="1"
+        android:text="@string/position"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="Massimo"
+        android:text="@string/playerName"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/tvScorePosition"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="5"
-        android:textSize="30sp"
+        android:text="@string/defaultErrors"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvErrInfo"
         app:layout_constraintTop_toBottomOf="@+id/tvScorePosition"
@@ -49,12 +49,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:text="75.00"
-        android:textSize="30sp"
+        android:text="@string/defaultTime"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toEndOf="@+id/tvTimeInfo"
-        app:layout_constraintTop_toBottomOf="@+id/tvScoreData" />
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreData"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvScoreData"
@@ -64,7 +68,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/dateInfo"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvScoreName"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,13 +77,14 @@
         android:id="@+id/tvErrInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/errorsInfo"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvScorePosition" />
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreName" />
 
     <TextView
         android:id="@+id/tvTimeInfo"
@@ -89,7 +94,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/timeInfo"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvScoreErrors"
         app:layout_constraintTop_toBottomOf="@+id/tvScoreName" />

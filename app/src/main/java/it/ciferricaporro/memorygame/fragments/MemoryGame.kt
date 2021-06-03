@@ -1,6 +1,7 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -65,6 +66,7 @@ class MemoryGame : Fragment() {
                 updateViews()
                 if(checkAll()){
                     btnSaveScore.isVisible = true
+                    startTimer(viewMG, false)
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
@@ -74,7 +76,7 @@ class MemoryGame : Fragment() {
             btnSaveScore.isVisible = false
             tvErr.text = "0"
             newGame()
-
+            startTimer(viewMG, true)
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
@@ -83,15 +85,16 @@ class MemoryGame : Fragment() {
         }
 
         // access the chronometer from XML file
-        val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
+        //val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
 
         //access the button using id
-        val btn = viewMG.findViewById<Button>(R.id.btn)
+        /*val btn = viewMG.findViewById<Button>(R.id.btn)
         btn?.setOnClickListener(object : View.OnClickListener {
 
             var isWorking = false
 
             override fun onClick(v: View) {
+                meter.setBase(SystemClock.elapsedRealtime())
                 if (!isWorking) {
                     meter.start()
                     isWorking = true
@@ -108,9 +111,15 @@ class MemoryGame : Fragment() {
                     else
                         R.string.stopped),
                     Toast.LENGTH_SHORT).show()
+
+                if(!isWorking){
+                    val time=SystemClock.elapsedRealtime() -meter.base
+                    Toast.makeText(requireContext(), time.toString() ,Toast.LENGTH_LONG).show()
+                }
             }
         })
-
+         */
+        startTimer(viewMG, true)
     }
 
     private fun updateViews(){
@@ -184,6 +193,20 @@ class MemoryGame : Fragment() {
         }
         indexOfSelectedCarrd = null
         updateViews()
+        btnSaveScore.isVisible = true
+    }
+
+    private fun startTimer(viewMG: View, state: Boolean){
+        val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
+        meter.setBase(SystemClock.elapsedRealtime())
+        if(state){
+            meter.start()
+        }else{
+            meter.stop()
+            val time = SystemClock.elapsedRealtime() - meter.getBase()
+            Toast.makeText(requireContext(), time.toString() ,Toast.LENGTH_SHORT).show()
+        }
+
     }
 
 }

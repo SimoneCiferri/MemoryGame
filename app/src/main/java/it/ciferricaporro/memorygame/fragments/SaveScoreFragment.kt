@@ -54,11 +54,12 @@ class SaveScoreFragment : Fragment() {
         val errs = args.err
         val sdf = SimpleDateFormat("dd/mm/yyyy")
         val currentDate = sdf.format(Date())
+        Toast.makeText(requireContext(), currentDate, Toast.LENGTH_LONG).show()
 
         if(inputCheck(playerName)){
             val user = User(0, playerName, 10.0, currentDate, errs)
             userViewModel.addUser(user)
-            Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()
             Navigation.findNavController(viewSC).navigate(navToScore)
         }else{

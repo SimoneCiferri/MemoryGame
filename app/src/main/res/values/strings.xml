@@ -17,5 +17,9 @@
     <string name="errorsInfo">Errors = </string>
     <string name="dateInfo">dd/mm/yyyy</string>
     <string name="timeInfo">Time = </string>
+    <string name="defaultErrors">0</string>
+    <string name="defaultTime">00.05</string>
+    <string name="playerName">Player1</string>
+    <string name="position">1</string>
 
 </resources>

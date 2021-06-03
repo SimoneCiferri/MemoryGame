@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setBottomNav()
-
-        val sdf = SimpleDateFormat("dd/mm/yyyy")
-        val currentDate = sdf.format(Date())
-        Toast.makeText(this, " C DATE is $currentDate", Toast.LENGTH_LONG).show()
     }
 
     private fun setBottomNav(){
