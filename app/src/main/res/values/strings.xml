@@ -9,4 +9,5 @@
     <string name="about">About</string>
     <string name="game">Game</string>
     <string name="scoreboard">Scoreboard</string>
+    <string name="_defaultErr">0</string>
 </resources>
