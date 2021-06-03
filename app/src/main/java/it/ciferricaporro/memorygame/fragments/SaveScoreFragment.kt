@@ -18,6 +18,8 @@ import androidx.navigation.fragment.navArgs
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class SaveScoreFragment : Fragment() {
@@ -50,9 +52,11 @@ class SaveScoreFragment : Fragment() {
     private fun insertDataToDB(viewSC:View) {
         val playerName = viewSC.findViewById<EditText>(R.id.etPalyerName).text.toString()
         val errs = args.err
+        val sdf = SimpleDateFormat("dd/mm/yyyy")
+        val currentDate = sdf.format(Date())
 
         if(inputCheck(playerName)){
-            val user = User(0, playerName, 10.0, errs)
+            val user = User(0, playerName, 10.0, currentDate, errs)
             userViewModel.addUser(user)
             Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()

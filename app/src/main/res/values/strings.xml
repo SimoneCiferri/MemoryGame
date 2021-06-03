@@ -14,4 +14,8 @@
     <string name="start">Start Timer</string>
     <string name="working">Started</string>
     <string name="stopped">Stopped</string>
+    <string name="errorsInfo">Errors = </string>
+    <string name="dateInfo">dd/mm/yyyy</string>
+    <string name="timeInfo">Time = </string>
+
 </resources>
