@@ -9,4 +9,8 @@
     <string name="about">About</string>
     <string name="game">Game</string>
     <string name="scoreboard">Scoreboard</string>
+    <string name="stop">Stop Timer</string>
+    <string name="start">Start Timer</string>
+    <string name="working">Started</string>
+    <string name="stopped">Stopped</string>
 </resources>

@@ -5,14 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
+import kotlinx.coroutines.NonCancellable.start
+import kotlinx.coroutines.delay
 
 
 class MemoryGame : Fragment() {
@@ -74,12 +74,42 @@ class MemoryGame : Fragment() {
             btnSaveScore.isVisible = false
             tvErr.text = "0"
             newGame()
+
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
             val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt())
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
+
+        // access the chronometer from XML file
+        val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
+
+        //access the button using id
+        val btn = viewMG.findViewById<Button>(R.id.btn)
+        btn?.setOnClickListener(object : View.OnClickListener {
+
+            var isWorking = false
+
+            override fun onClick(v: View) {
+                if (!isWorking) {
+                    meter.start()
+                    isWorking = true
+                } else {
+                    meter.stop()
+                    isWorking = false
+                }
+
+                btn.setText(if (isWorking) R.string.start else R.string.stop)
+
+                Toast.makeText(requireContext(), getString(
+                    if (isWorking)
+                        R.string.working
+                    else
+                        R.string.stopped),
+                    Toast.LENGTH_SHORT).show()
+            }
+        })
 
     }
 
