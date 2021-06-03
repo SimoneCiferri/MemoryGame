@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
@@ -33,6 +34,14 @@ class SaveScoreFragment : Fragment() {
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         viewSC.findViewById<Button>(R.id.btnSave).setOnClickListener {
             insertDataToDB(viewSC)
+        }
+
+        val etPlayerName = viewSC.findViewById<EditText>(R.id.etPalyerName)
+        etPlayerName.doAfterTextChanged {
+            if(etPlayerName.text.toString().length > 4){
+                Toast.makeText(requireContext(), "Player name too long!!", Toast.LENGTH_LONG).show()
+                etPlayerName.setText("")
+            }
         }
 
         return viewSC
