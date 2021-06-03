@@ -1,6 +1,7 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.os.Bundle
+import android.support.v4.app.INotificationSideChannel
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
@@ -19,6 +22,7 @@ import it.ciferricaporro.memorygame.data.UserViewModel
 class SaveScoreFragment : Fragment() {
 
     private lateinit var userViewModel: UserViewModel
+    private val args: SaveScoreFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,9 +40,10 @@ class SaveScoreFragment : Fragment() {
 
     private fun insertDataToDB(viewSC:View) {
         val playerName = viewSC.findViewById<EditText>(R.id.etPalyerName).text.toString()
+        val errs = args.err
 
         if(inputCheck(playerName)){
-            val user = User(0, playerName, 10.0, 10)
+            val user = User(0, playerName, 10.0, errs)
             userViewModel.addUser(user)
             Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()

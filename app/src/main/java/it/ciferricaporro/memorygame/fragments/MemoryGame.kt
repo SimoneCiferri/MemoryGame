@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
@@ -20,6 +21,8 @@ class MemoryGame : Fragment() {
     private lateinit var cards: List<Card>
     private var indexOfSelectedCarrd: Int? = null
     private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
+    private lateinit var btnSaveScore: Button
+    private lateinit var tvErr: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,11 +30,15 @@ class MemoryGame : Fragment() {
     ): View? {
         val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
         binding.bottomNavigationView.isVisible = true
+        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
+        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         setUiController(viewMG)
         return viewMG
     }
 
     private fun setUiController(viewMG: View){
+        btnSaveScore.isVisible = false
+        tvErr.text = "0"
         images.addAll(images)
         images.shuffle()
 
@@ -57,17 +64,20 @@ class MemoryGame : Fragment() {
                 updateModels(index)
                 updateViews()
                 if(checkAll()){
+                    btnSaveScore.isVisible = true
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
         }
 
         viewMG.findViewById<Button>(R.id.btnNewGame).setOnClickListener {
+            btnSaveScore.isVisible = false
+            tvErr.text = "0"
             newGame()
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
-            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment()
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt())
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
 
@@ -98,7 +108,7 @@ class MemoryGame : Fragment() {
             restoreCards()
             indexOfSelectedCarrd = position
         }else{
-            checkForMatch(indexOfSelectedCarrd!!, position)
+            checkForMatch(indexOfSelectedCarrd!!, position, tvErr)
             indexOfSelectedCarrd = null
 
         }
@@ -113,11 +123,13 @@ class MemoryGame : Fragment() {
         }
     }
 
-    private fun checkForMatch(indexOfSelectedCarrd: Int, position: Int) {
+    private fun checkForMatch(indexOfSelectedCarrd: Int, position: Int, tvErr: TextView) {
         if(cards[indexOfSelectedCarrd].ID == cards[position].ID){
             //Toast.makeText(this, "Match Found!!",Toast.LENGTH_LONG).show()
             cards[indexOfSelectedCarrd].isMatched = true
             cards[position].isMatched = true
+        }else{
+            tvErr.text = (tvErr.text.toString().toInt() + 1).toString()
         }
     }
 
@@ -143,4 +155,5 @@ class MemoryGame : Fragment() {
         indexOfSelectedCarrd = null
         updateViews()
     }
+
 }
