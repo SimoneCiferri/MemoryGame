@@ -84,41 +84,6 @@ class MemoryGame : Fragment() {
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
 
-        // access the chronometer from XML file
-        //val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
-
-        //access the button using id
-        /*val btn = viewMG.findViewById<Button>(R.id.btn)
-        btn?.setOnClickListener(object : View.OnClickListener {
-
-            var isWorking = false
-
-            override fun onClick(v: View) {
-                meter.setBase(SystemClock.elapsedRealtime())
-                if (!isWorking) {
-                    meter.start()
-                    isWorking = true
-                } else {
-                    meter.stop()
-                    isWorking = false
-                }
-
-                btn.setText(if (isWorking) R.string.start else R.string.stop)
-
-                Toast.makeText(requireContext(), getString(
-                    if (isWorking)
-                        R.string.working
-                    else
-                        R.string.stopped),
-                    Toast.LENGTH_SHORT).show()
-
-                if(!isWorking){
-                    val time=SystemClock.elapsedRealtime() -meter.base
-                    Toast.makeText(requireContext(), time.toString() ,Toast.LENGTH_LONG).show()
-                }
-            }
-        })
-         */
         startTimer(viewMG, true)
     }
 
@@ -198,13 +163,13 @@ class MemoryGame : Fragment() {
 
     private fun startTimer(viewMG: View, state: Boolean){
         val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
-        meter.setBase(SystemClock.elapsedRealtime())
         if(state){
+            meter.base = SystemClock.elapsedRealtime()
             meter.start()
         }else{
             meter.stop()
-            val time = SystemClock.elapsedRealtime() - meter.getBase()
-            Toast.makeText(requireContext(), time.toString() ,Toast.LENGTH_SHORT).show()
+            val time = meter.text.toString()
+            Toast.makeText(requireContext(), time ,Toast.LENGTH_SHORT).show()
         }
 
     }
