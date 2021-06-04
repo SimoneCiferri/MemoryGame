@@ -2,22 +2,11 @@ package it.ciferricaporro.memorygame
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import it.ciferricaporro.memorygame.databinding.ActivityMainBinding
-import java.text.SimpleDateFormat
-import java.util.*
-import android.widget.Chronometer
-
-import java.text.DateFormat;
-
-import java.text.DateFormat.getDateInstance
 
 
 class MainActivity : AppCompatActivity() {

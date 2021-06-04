@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
-import java.util.*
 
 class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() {
 

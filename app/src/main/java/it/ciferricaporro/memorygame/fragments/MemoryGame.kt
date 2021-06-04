@@ -1,7 +1,6 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.os.Bundle
-import android.os.SystemClock
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,6 @@ import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
-import kotlinx.coroutines.NonCancellable.start
-import kotlinx.coroutines.delay
 
 
 class MemoryGame : Fragment() {

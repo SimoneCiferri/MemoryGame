@@ -1,7 +1,6 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.os.Bundle
-import android.support.v4.app.INotificationSideChannel
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,8 +15,6 @@ import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
 import java.text.DateFormat
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class SaveScoreFragment : Fragment() {
