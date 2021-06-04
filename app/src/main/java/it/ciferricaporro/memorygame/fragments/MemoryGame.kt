@@ -30,17 +30,15 @@ class MemoryGame : Fragment() {
     ): View? {
         val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
         binding.bottomNavigationView.isVisible = true
-        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
-        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         setUiController(viewMG)
         return viewMG
     }
 
     private fun setUiController(viewMG: View){
+        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
+        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         btnSaveScore.isVisible = false
-        tvErr.text = "0"
         images.addAll(images)
-        images.shuffle()
 
         buttons = listOf(
             viewMG.findViewById(R.id.imageButton2),
@@ -55,8 +53,8 @@ class MemoryGame : Fragment() {
             viewMG.findViewById(R.id.imageButton11)
         )
 
-        cards = buttons.indices.map { index ->
-            Card(images[index])
+        for(btn in buttons){
+            btn.isEnabled = false
         }
 
         buttons.forEachIndexed { index, btn ->
@@ -73,8 +71,6 @@ class MemoryGame : Fragment() {
         }
 
         viewMG.findViewById<Button>(R.id.btnNewGame).setOnClickListener {
-            btnSaveScore.isVisible = false
-            tvErr.text = "0"
             newGame()
         }
 
@@ -101,7 +97,7 @@ class MemoryGame : Fragment() {
         val card = cards[position]
 
         if (card.isFaceUp){
-            //Toast.makeText(this, "invalid move!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "invalid move!",Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -153,10 +149,15 @@ class MemoryGame : Fragment() {
             card.isMatched = false
             card.isFaceUp = false
         }
+        for(btn in buttons){
+            btn.isEnabled = true
+        }
+        tvErr.text = "0"
+        btnSaveScore.isVisible = false
         indexOfSelectedCarrd = null
         updateViews()
         milliS = System.currentTimeMillis()
-        btnSaveScore.isVisible = true
+        //btnSaveScore.isVisible = true
     }
 
     private fun getTime(): String{
