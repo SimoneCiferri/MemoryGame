@@ -25,6 +25,7 @@ class MemoryGame : Fragment() {
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
     private lateinit var meter: Chronometer
+    private val milli= System.currentTimeMillis()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
