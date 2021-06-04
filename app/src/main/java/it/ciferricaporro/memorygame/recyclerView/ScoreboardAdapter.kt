@@ -29,7 +29,7 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
         holder.itemView.findViewById<TextView>(R.id.tvScorePosition).text = currentItem.id.toString()
         holder.itemView.findViewById<TextView>(R.id.tvScoreName).text = currentItem.player
         holder.itemView.findViewById<TextView>(R.id.tvScoreErrors).text = currentItem.errors.toString()
-        holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time.toString()
+        holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time
         holder.itemView.findViewById<TextView>(R.id.tvScoreData).text = currentItem.Data
     }
 

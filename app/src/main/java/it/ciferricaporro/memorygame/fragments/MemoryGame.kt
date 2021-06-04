@@ -24,6 +24,7 @@ class MemoryGame : Fragment() {
     private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
+    private lateinit var meter: Chronometer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +34,7 @@ class MemoryGame : Fragment() {
         binding.bottomNavigationView.isVisible = true
         btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
         tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
+        meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
         setUiController(viewMG)
         return viewMG
     }
@@ -66,7 +68,7 @@ class MemoryGame : Fragment() {
                 updateViews()
                 if(checkAll()){
                     btnSaveScore.isVisible = true
-                    startTimer(viewMG, false)
+                    startTimer(false)
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
@@ -76,15 +78,15 @@ class MemoryGame : Fragment() {
             btnSaveScore.isVisible = false
             tvErr.text = "0"
             newGame()
-            startTimer(viewMG, true)
+            startTimer(true)
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
-            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt())
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), meter.text.toString())
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
 
-        startTimer(viewMG, true)
+        startTimer(true)
     }
 
     private fun updateViews(){
@@ -161,8 +163,7 @@ class MemoryGame : Fragment() {
         btnSaveScore.isVisible = true
     }
 
-    private fun startTimer(viewMG: View, state: Boolean){
-        val meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
+    private fun startTimer(state: Boolean){
         if(state){
             meter.base = SystemClock.elapsedRealtime()
             meter.start()

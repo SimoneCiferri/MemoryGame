@@ -9,7 +9,7 @@ data class User(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val player: String,
-    val time: Double,
+    val time: String,
     val Data: String,
     val errors: Int
 )

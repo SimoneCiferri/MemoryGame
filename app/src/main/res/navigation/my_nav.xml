@@ -62,5 +62,9 @@
             android:name="err"
             app:argType="integer"
             android:defaultValue="0" />
+        <argument
+            android:name="timeR"
+            app:argType="string"
+            android:defaultValue='"00:00"' />
     </fragment>
 </navigation>

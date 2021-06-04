@@ -7,10 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -52,12 +49,13 @@ class SaveScoreFragment : Fragment() {
     private fun insertDataToDB(viewSC:View) {
         val playerName = viewSC.findViewById<EditText>(R.id.etPalyerName).text.toString()
         val errs = args.err
+        val time = args.timeR
         val sdf = SimpleDateFormat("dd/mm/yyyy")
         val currentDate = sdf.format(Date())
         Toast.makeText(requireContext(), currentDate, Toast.LENGTH_LONG).show()
 
         if(inputCheck(playerName)){
-            val user = User(0, playerName, 10.0, currentDate, errs)
+            val user = User(0, playerName, time, currentDate, errs)
             userViewModel.addUser(user)
             //Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()
