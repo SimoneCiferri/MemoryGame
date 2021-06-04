@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
+import java.util.*
 
 class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() {
 
@@ -26,7 +27,6 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = userList[position]
-        holder.itemView.findViewById<TextView>(R.id.tvScorePosition).text = currentItem.id.toString()
         holder.itemView.findViewById<TextView>(R.id.tvScoreName).text = currentItem.player
         holder.itemView.findViewById<TextView>(R.id.tvScoreErrors).text = currentItem.errors.toString()
         holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time

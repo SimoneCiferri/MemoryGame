@@ -7,42 +7,25 @@
     android:padding="24sp">
 
     <TextView
-        android:id="@+id/tvScorePosition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/position"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
         android:id="@+id/tvScoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/playerName"
-        android:textSize="30sp"
-        app:layout_constraintStart_toEndOf="@+id/tvScorePosition"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvScoreErrors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/defaultErrors"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvErrInfo"
-        app:layout_constraintTop_toBottomOf="@+id/tvScorePosition"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintStart_toEndOf="@+id/tvErrInfo" />
 
     <TextView
         android:id="@+id/tvScoreTime"
@@ -67,8 +50,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/dateInfo"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTimeInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tvScoreName"
         app:layout_constraintTop_toTopOf="parent" />
