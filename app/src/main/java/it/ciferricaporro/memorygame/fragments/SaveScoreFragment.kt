@@ -52,9 +52,6 @@ class SaveScoreFragment : Fragment() {
         val errs = args.err
         val time = args.timeR
 
-       /*val sdf = SimpleDateFormat("dd/mm/yyyy")
-        val currentDate = sdf.format(Date())*/
-
         var calendar : java.util.Calendar = java.util.Calendar.getInstance()
         var currentDate : String = DateFormat.getDateInstance().format(calendar.getTime())
 
