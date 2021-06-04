@@ -1,5 +1,7 @@
 package it.ciferricaporro.memorygame.fragments
 
+import android.animation.Animator
+import android.animation.AnimatorInflater
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,7 +23,7 @@ class MemoryGame : Fragment() {
     private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
-    private var milliS= System.currentTimeMillis()
+    private var milliS: Long = 0
     private var milliStop: Long = 0
 
     override fun onCreateView(
@@ -30,18 +32,15 @@ class MemoryGame : Fragment() {
     ): View? {
         val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
         binding.bottomNavigationView.isVisible = true
-        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
-        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         setUiController(viewMG)
         return viewMG
     }
 
     private fun setUiController(viewMG: View){
+        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
+        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         btnSaveScore.isVisible = false
-        tvErr.text = "0"
         images.addAll(images)
-        images.shuffle()
-
         buttons = listOf(
             viewMG.findViewById(R.id.imageButton2),
             viewMG.findViewById(R.id.imageButton3),
@@ -55,8 +54,8 @@ class MemoryGame : Fragment() {
             viewMG.findViewById(R.id.imageButton11)
         )
 
-        cards = buttons.indices.map { index ->
-            Card(images[index])
+        for(btn in buttons){
+            btn.isEnabled = false
         }
 
         buttons.forEachIndexed { index, btn ->
@@ -65,7 +64,6 @@ class MemoryGame : Fragment() {
                 updateViews()
                 if(checkAll()){
                     milliStop = System.currentTimeMillis()
-                    Toast.makeText(requireContext(), (milliStop - milliS).toString() ,Toast.LENGTH_SHORT).show()
                     btnSaveScore.isVisible = true
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
@@ -73,8 +71,6 @@ class MemoryGame : Fragment() {
         }
 
         viewMG.findViewById<Button>(R.id.btnNewGame).setOnClickListener {
-            btnSaveScore.isVisible = false
-            tvErr.text = "0"
             newGame()
         }
 
@@ -101,7 +97,7 @@ class MemoryGame : Fragment() {
         val card = cards[position]
 
         if (card.isFaceUp){
-            //Toast.makeText(this, "invalid move!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "invalid move!",Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -153,17 +149,27 @@ class MemoryGame : Fragment() {
             card.isMatched = false
             card.isFaceUp = false
         }
+        for(btn in buttons){
+            btn.isEnabled = true
+        }
+        tvErr.text = "0"
+        btnSaveScore.isVisible = false
         indexOfSelectedCarrd = null
         updateViews()
         milliS = System.currentTimeMillis()
-        btnSaveScore.isVisible = true
+        //btnSaveScore.isVisible = true
     }
 
     private fun getTime(): String{
         val time = (milliStop - milliS)
-        val min = ((time/1000)/60).toString()
-        Toast.makeText(requireContext(), min ,Toast.LENGTH_LONG).show()
-        val sec = ((time/1000)).toString()
+        var min = ((time/1000)/60).toString()
+        if(min == "0"){
+            min = "00"
+        }
+        var sec = ((time/1000)).toString()
+        if(sec.toInt() < 10){
+            sec = "0" + sec
+        }
         val msec = (((time/10)/10)%10).toString() +((time/10)%10).toString() + (time%10).toString()
         return min + ":" + sec + ":" + msec
     }

@@ -5,11 +5,13 @@
         android:icon="@drawable/icon_memorygame"
         android:id="@+id/memoryGame"/>
 
-    <item android:title="@string/scoreboard"
-        android:icon="@drawable/icon_memorygame"
-        android:id="@+id/scoreboardFragment"/>
+    <item
+        android:id="@+id/scoreboardFragment"
+        android:icon="@drawable/ic_baseline_score"
+        android:title="@string/scoreboard" />
 
-    <item android:title="@string/about"
+    <item
+        android:id="@+id/aboutFragment"
         android:icon="@drawable/icon_memorygame"
-        android:id="@+id/aboutFragment"/>
+        android:title="@string/about" />
 </menu>
