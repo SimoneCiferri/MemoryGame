@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="24sp">
+    android:padding="16sp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -27,7 +27,7 @@
             android:id="@+id/tvScoreErrors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="120dp"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="16dp"
             android:text="@string/defaultErrors"
@@ -37,7 +37,7 @@
             android:id="@+id/tvScoreTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
+            android:layout_marginStart="245dp"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="16dp"
             android:text="@string/defaultTime"
@@ -47,8 +47,8 @@
             android:id="@+id/tvScoreData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="180dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="130dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
             android:text="@string/dateInfo"
@@ -68,7 +68,7 @@
             android:id="@+id/tvTimeInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="180dp"
+            android:layout_marginStart="170dp"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="16dp"
             android:text="@string/timeInfo"

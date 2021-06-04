@@ -21,5 +21,6 @@
     <string name="defaultTime">00.05</string>
     <string name="playerName">Player1</string>
     <string name="position">1</string>
+    <string name="player_name">Player Name</string>
 
 </resources>

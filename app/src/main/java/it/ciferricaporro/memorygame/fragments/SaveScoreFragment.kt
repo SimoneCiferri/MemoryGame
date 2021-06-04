@@ -14,6 +14,7 @@ import androidx.navigation.fragment.navArgs
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
+import org.w3c.dom.Text
 import java.text.DateFormat
 
 
@@ -33,9 +34,12 @@ class SaveScoreFragment : Fragment() {
             insertDataToDB(viewSC)
         }
 
+        viewSC.findViewById<TextView>(R.id.tvErrReview).text = "Errors = " + args.err.toString()
+        viewSC.findViewById<TextView>(R.id.tvTimeReview).text = "Time = " + args.timeR
+
         val etPlayerName = viewSC.findViewById<EditText>(R.id.etPalyerName)
         etPlayerName.doAfterTextChanged {
-            if(etPlayerName.text.toString().length > 4){
+            if(etPlayerName.text.toString().length > 5){
                 Toast.makeText(requireContext(), "Player name too long!!", Toast.LENGTH_LONG).show()
                 etPlayerName.setText("")
             }

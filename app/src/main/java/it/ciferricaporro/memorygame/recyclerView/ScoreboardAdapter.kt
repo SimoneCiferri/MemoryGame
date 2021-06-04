@@ -1,12 +1,15 @@
 package it.ciferricaporro.memorygame.recyclerView
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
+import it.ciferricaporro.memorygame.data.UserViewModel
 
 class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() {
 
@@ -30,6 +33,8 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
         holder.itemView.findViewById<TextView>(R.id.tvScoreErrors).text = currentItem.errors.toString()
         holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time
         holder.itemView.findViewById<TextView>(R.id.tvScoreData).text = currentItem.Data
+        //holder.itemView.setBackgroundColor(Color.LTGRAY)
+
     }
 
     fun setData(user: List<User>){
