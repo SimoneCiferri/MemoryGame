@@ -15,6 +15,7 @@ import androidx.navigation.fragment.navArgs
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -50,8 +51,14 @@ class SaveScoreFragment : Fragment() {
         val playerName = viewSC.findViewById<EditText>(R.id.etPalyerName).text.toString()
         val errs = args.err
         val time = args.timeR
-        val sdf = SimpleDateFormat("dd/mm/yyyy")
-        val currentDate = sdf.format(Date())
+
+       /*val sdf = SimpleDateFormat("dd/mm/yyyy")
+        val currentDate = sdf.format(Date())*/
+
+        var calendar : java.util.Calendar = java.util.Calendar.getInstance()
+        var currentDate : String = DateFormat.getDateInstance().format(calendar.getTime())
+
+
         Toast.makeText(requireContext(), currentDate, Toast.LENGTH_LONG).show()
 
         if(inputCheck(playerName)){

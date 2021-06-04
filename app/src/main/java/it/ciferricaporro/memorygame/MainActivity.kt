@@ -15,6 +15,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 import android.widget.Chronometer
 
+import java.text.DateFormat;
+
+import java.text.DateFormat.getDateInstance
+
+
 class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var binding: ActivityMainBinding
@@ -24,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setBottomNav()
+
     }
 
     private fun setBottomNav(){
