@@ -1,5 +1,7 @@
 package it.ciferricaporro.memorygame.fragments
 
+import android.animation.Animator
+import android.animation.AnimatorInflater
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -39,7 +41,6 @@ class MemoryGame : Fragment() {
         tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         btnSaveScore.isVisible = false
         images.addAll(images)
-
         buttons = listOf(
             viewMG.findViewById(R.id.imageButton2),
             viewMG.findViewById(R.id.imageButton3),
