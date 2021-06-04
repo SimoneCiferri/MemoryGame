@@ -49,8 +49,8 @@ class SaveScoreFragment : Fragment() {
         val errs = args.err
         val time = args.timeR
 
-        var calendar : java.util.Calendar = java.util.Calendar.getInstance()
-        var currentDate : String = DateFormat.getDateInstance().format(calendar.getTime())
+        val calendar : java.util.Calendar = java.util.Calendar.getInstance()
+        val currentDate : String = DateFormat.getDateInstance().format(calendar.time)
 
 
         Toast.makeText(requireContext(), currentDate, Toast.LENGTH_LONG).show()
