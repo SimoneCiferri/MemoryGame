@@ -21,7 +21,7 @@ class MemoryGame : Fragment() {
     private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
-    private var milliS= System.currentTimeMillis()
+    private var milliS: Long = 0
     private var milliStop: Long = 0
 
     override fun onCreateView(
@@ -63,7 +63,6 @@ class MemoryGame : Fragment() {
                 updateViews()
                 if(checkAll()){
                     milliStop = System.currentTimeMillis()
-                    Toast.makeText(requireContext(), (milliStop - milliS).toString() ,Toast.LENGTH_SHORT).show()
                     btnSaveScore.isVisible = true
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
@@ -162,9 +161,14 @@ class MemoryGame : Fragment() {
 
     private fun getTime(): String{
         val time = (milliStop - milliS)
-        val min = ((time/1000)/60).toString()
-        Toast.makeText(requireContext(), min ,Toast.LENGTH_LONG).show()
-        val sec = ((time/1000)).toString()
+        var min = ((time/1000)/60).toString()
+        if(min == "0"){
+            min = "00"
+        }
+        var sec = ((time/1000)).toString()
+        if(sec.toInt() < 10){
+            sec = "0" + sec
+        }
         val msec = (((time/10)/10)%10).toString() +((time/10)%10).toString() + (time%10).toString()
         return min + ":" + sec + ":" + msec
     }
