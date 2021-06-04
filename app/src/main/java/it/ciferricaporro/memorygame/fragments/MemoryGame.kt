@@ -24,8 +24,8 @@ class MemoryGame : Fragment() {
     private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
-    private lateinit var meter: Chronometer
-    private val milli= System.currentTimeMillis()
+    private var milliS= System.currentTimeMillis()
+    private var milliStop: Long = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,7 +35,6 @@ class MemoryGame : Fragment() {
         binding.bottomNavigationView.isVisible = true
         btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
         tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
-        meter = viewMG.findViewById<Chronometer>(R.id.c_meter)
         setUiController(viewMG)
         return viewMG
     }
@@ -68,8 +67,9 @@ class MemoryGame : Fragment() {
                 updateModels(index)
                 updateViews()
                 if(checkAll()){
+                    milliStop = System.currentTimeMillis()
+                    Toast.makeText(requireContext(), (milliStop - milliS).toString() ,Toast.LENGTH_SHORT).show()
                     btnSaveScore.isVisible = true
-                    startTimer(false)
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
@@ -79,15 +79,12 @@ class MemoryGame : Fragment() {
             btnSaveScore.isVisible = false
             tvErr.text = "0"
             newGame()
-            startTimer(true)
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
-            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), meter.text.toString())
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime())
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
-
-        startTimer(true)
     }
 
     private fun updateViews(){
@@ -161,19 +158,17 @@ class MemoryGame : Fragment() {
         }
         indexOfSelectedCarrd = null
         updateViews()
+        milliS = System.currentTimeMillis()
         btnSaveScore.isVisible = true
     }
 
-    private fun startTimer(state: Boolean){
-        if(state){
-            meter.base = SystemClock.elapsedRealtime()
-            meter.start()
-        }else{
-            meter.stop()
-            val time = meter.text.toString()
-            Toast.makeText(requireContext(), time ,Toast.LENGTH_SHORT).show()
-        }
-
+    private fun getTime(): String{
+        val time = (milliStop - milliS)
+        val min = ((time/1000)/60).toString()
+        Toast.makeText(requireContext(), min ,Toast.LENGTH_LONG).show()
+        val sec = ((time/1000)).toString()
+        val msec = (((time/10)/10)%10).toString() +((time/10)%10).toString() + (time%10).toString()
+        return min + ":" + sec + ":" + msec
     }
 
 }
