@@ -22,5 +22,6 @@
     <string name="playerName">Player1</string>
     <string name="position">1</string>
     <string name="player_name">Player Name</string>
+    <string name="aboutUs">ABOUT US</string>
 
 </resources>
