@@ -57,7 +57,9 @@
         tools:layout="@layout/fragment_save_score" >
         <action
             android:id="@+id/action_saveScoreFragment_to_scoreboardFragment"
-            app:destination="@id/scoreboardFragment" />
+            app:destination="@id/scoreboardFragment"
+            app:popUpTo="@id/memoryGame"
+            app:popUpToInclusive="true" />
         <argument
             android:name="err"
             app:argType="integer"
