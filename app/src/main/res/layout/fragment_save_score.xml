@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/etPalyerName"
+        android:id="@+id/etPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,12 +29,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="#000000"
         android:text="@string/save_score"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPalyerName" />
+        app:layout_constraintTop_toBottomOf="@+id/etPlayerName"
+        app:layout_constraintVertical_bias="0.378" />
 
     <TextView
         android:id="@+id/tvErrReview"
@@ -43,10 +45,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPalyerName" />
+        app:layout_constraintTop_toBottomOf="@+id/etPlayerName"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvTimeReview"
@@ -55,8 +60,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvErrReview" />
+        app:layout_constraintTop_toBottomOf="@+id/tvErrReview"
+        android:textStyle="italic"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
