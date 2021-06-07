@@ -87,7 +87,7 @@ class MemoryGame : Fragment() {
         cards.forEachIndexed{ index, card ->
             val btn = buttons[index]
             if(card.isMatched){
-                btn.alpha = 0.5f
+                btn.alpha = 0.3f
             }
             else{
                 btn.alpha = 1f
