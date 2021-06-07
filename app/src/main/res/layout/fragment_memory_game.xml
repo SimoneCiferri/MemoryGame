@@ -13,7 +13,8 @@
         android:layout_height="70dp"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
 
@@ -21,11 +22,14 @@
         android:id="@+id/imageButton11"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
+        android:layout_marginEnd="8dp"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
 
     <ImageButton
         android:id="@+id/imageButton9"
@@ -33,7 +37,8 @@
         android:layout_height="70dp"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
 
@@ -43,7 +48,8 @@
         android:layout_height="70dp"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
 
@@ -53,7 +59,8 @@
         android:layout_height="70dp"
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,11 +68,15 @@
         android:id="@+id/imageButton6"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="@dimen/memoryMargin"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+        android:layout_marginEnd="8dp"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton5"
@@ -73,7 +84,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -83,7 +95,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
@@ -93,7 +106,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -103,7 +117,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
-        android:src="@drawable/ic_baseline_help_outline_24"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -112,15 +127,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#000000"
         android:text="@string/new_game"
         app:layout_constraintBottom_toTopOf="@+id/btnSaveScore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnSaveScore"
@@ -129,6 +143,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="@dimen/memoryMargin"
+        android:backgroundTint="#000000"
         android:text="@string/save_score"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

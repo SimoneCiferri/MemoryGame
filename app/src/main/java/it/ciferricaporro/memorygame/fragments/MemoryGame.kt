@@ -89,7 +89,7 @@ class MemoryGame : Fragment() {
             else{
                 btn.alpha = 1f
             }
-            btn.setImageResource(if(card.isFaceUp) card.ID else R.drawable.ic_baseline_help_outline_24)
+            btn.setImageResource(if(card.isFaceUp) card.ID else R.drawable.quesmark)
         }
     }
 
