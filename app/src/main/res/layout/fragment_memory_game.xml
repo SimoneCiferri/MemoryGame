@@ -122,6 +122,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/memoryMargin"
+        android:layout_marginEnd="8dp"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton9"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/memoryMargin"
+        android:layout_marginEnd="8dp"
+        android:background="#00E6E0E0"
+        android:src="@drawable/quesmark"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton10"
+        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton13" />
+
     <Button
         android:id="@+id/btnNewGame"
         android:layout_width="wrap_content"

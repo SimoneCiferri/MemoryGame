@@ -20,7 +20,7 @@ class MemoryGame : Fragment() {
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<Card>
     private var indexOfSelectedCarrd: Int? = null
-    private val images = mutableListOf(R.drawable.pikachu, R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar, R.drawable.squirtle)
+    private val images = mutableListOf(R.drawable.pikachu, R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar, R.drawable.squirtle, R.drawable.mew)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
     private var milliS: Long = 0
@@ -51,11 +51,14 @@ class MemoryGame : Fragment() {
             viewMG.findViewById(R.id.imageButton8),
             viewMG.findViewById(R.id.imageButton9),
             viewMG.findViewById(R.id.imageButton10),
-            viewMG.findViewById(R.id.imageButton11)
+            viewMG.findViewById(R.id.imageButton11),
+                viewMG.findViewById(R.id.imageButton13),
+                viewMG.findViewById(R.id.imageButton14)
         )
 
         for(btn in buttons){
             btn.isEnabled = false
+            btn.alpha = 0.5f
         }
 
         buttons.forEachIndexed { index, btn ->
