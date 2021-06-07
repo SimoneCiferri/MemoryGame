@@ -20,7 +20,7 @@ class MemoryGame : Fragment() {
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<Card>
     private var indexOfSelectedCarrd: Int? = null
-    private val images = mutableListOf(R.drawable.ic_baseline_local_taxi, R.drawable.ic_baseline_mood, R.drawable.ic_baseline_phone_android, R.drawable.ic_baseline_sick, R.drawable.ic_baseline_thumb_up)
+    private val images = mutableListOf(R.drawable.pikachu, R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar, R.drawable.squirtle)
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
     private var milliS: Long = 0
