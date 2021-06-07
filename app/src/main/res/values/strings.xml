@@ -23,5 +23,9 @@
     <string name="position">1</string>
     <string name="player_name">Player Name</string>
     <string name="aboutUs">ABOUT US</string>
+    <string name="mp2021">Mobile Programming 20/21</string>
+    <string name="ciferri_simone">Ciferri Simone</string>
+    <string name="caporro_giulio">Caporro Giulio</string>
+    <string name="gitHubLink">https://github.com/SimoneCiferri/MemoryGame</string>
 
 </resources>
