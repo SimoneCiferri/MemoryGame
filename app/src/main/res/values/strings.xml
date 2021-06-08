@@ -27,5 +27,8 @@
     <string name="ciferri_simone">Ciferri Simone</string>
     <string name="caporro_giulio">Caporro Giulio</string>
     <string name="gitHubLink">https://github.com/SimoneCiferri/MemoryGame</string>
+    <string name="save_your_score_tutorial">Save Your Score!</string>
+    <string name="match_the_cards_tutorial">Match the cards!</string>
+    <string name="get_code_tutorial">Get the code for free!</string>
 
 </resources>
