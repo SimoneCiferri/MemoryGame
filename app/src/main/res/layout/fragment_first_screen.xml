@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ivFirstScreen"
         android:layout_width="312dp"
         android:layout_height="607dp"
         android:layout_marginStart="8dp"
@@ -45,15 +45,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome1" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivFinger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/finger"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFirstScreen"
+        app:layout_constraintEnd_toEndOf="@+id/ivFirstScreen"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/ivFirstScreen"
+        app:layout_constraintTop_toTopOf="@+id/ivFirstScreen"
         app:layout_constraintVertical_bias="0.624" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
