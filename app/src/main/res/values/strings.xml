@@ -27,5 +27,7 @@
     <string name="ciferri_simone">Ciferri Simone</string>
     <string name="caporro_giulio">Caporro Giulio</string>
     <string name="gitHubLink">https://github.com/SimoneCiferri/MemoryGame</string>
+    <string name="tvAboutText">Hello dear, are you enjoying the game?.\nI hope so :D!\n\nWe are two computer engineering students of the Mobile Programming course taught by our beloved professor Massimo Regoli
+        and we were pleased to make our work open to the public so that it can be improved in the future. If you are interested...\n\n\nThis is the link:</string>
 
 </resources>
