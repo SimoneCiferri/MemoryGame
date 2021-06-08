@@ -1,6 +1,5 @@
 package it.ciferricaporro.memorygame.fragments
 
-import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -128,6 +127,8 @@ class MemoryGame : Fragment() {
             //Toast.makeText(this, "Match Found!!",Toast.LENGTH_LONG).show()
             cards[indexOfSelectedCarrd].isMatched = true
             cards[position].isMatched = true
+            flipCard(buttons[position])
+            flipCard(buttons[indexOfSelectedCarrd])
         }else{
             tvErr.text = (tvErr.text.toString().toInt() + 1).toString()
         }
@@ -175,6 +176,13 @@ class MemoryGame : Fragment() {
         }
         val msec = (((time/10)/10)%10).toString() +((time/10)%10).toString() + (time%10).toString()
         return min + ":" + sec + ":" + msec
+    }
+
+    private fun flipCard(btn: ImageButton){
+        val flip = AnimatorInflater.loadAnimator(requireContext(), R.animator.flip)
+        flip.duration = 250
+        flip.setTarget(btn)
+        flip.start()
     }
 
 }

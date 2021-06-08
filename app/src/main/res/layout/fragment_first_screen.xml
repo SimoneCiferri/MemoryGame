@@ -10,9 +10,11 @@
         android:id="@+id/tvWelcome1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tutorial 1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/match_the_cards_tutorial"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,4 +30,30 @@
         android:textColor="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFirstScreen"
+        android:layout_width="312dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/firstscreentutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome1" />
+
+    <ImageView
+        android:id="@+id/ivFinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/finger"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFirstScreen"
+        app:layout_constraintEnd_toEndOf="@+id/ivFirstScreen"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/ivFirstScreen"
+        app:layout_constraintTop_toTopOf="@+id/ivFirstScreen"
+        app:layout_constraintVertical_bias="0.624" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
