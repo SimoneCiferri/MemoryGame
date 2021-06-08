@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +24,8 @@ class ScoreboardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val viewSC = inflater.inflate(R.layout.fragment_scoreboard, container, false)
+
+        val tvNoScore = viewSC.findViewById<TextView>(R.id.tvNoScore)
 
         //Recyclerview
         val adapter = ScoreboardAdapter()

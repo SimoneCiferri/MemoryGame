@@ -12,11 +12,15 @@
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_splashFragment_to_memoryGame"
             app:destination="@id/memoryGame"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -28,6 +32,8 @@
         <action
             android:id="@+id/action_viewPagerFragment_to_memoryGame"
             app:destination="@id/memoryGame"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
             app:popUpTo="@id/viewPagerFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -38,7 +44,9 @@
         tools:layout="@layout/fragment_memory_game" >
         <action
             android:id="@+id/action_memoryGame_to_saveScoreFragment"
-            app:destination="@id/saveScoreFragment" />
+            app:destination="@id/saveScoreFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -58,6 +66,8 @@
         <action
             android:id="@+id/action_saveScoreFragment_to_scoreboardFragment"
             app:destination="@id/scoreboardFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
             app:popUpTo="@id/memoryGame"
             app:popUpToInclusive="true" />
         <argument

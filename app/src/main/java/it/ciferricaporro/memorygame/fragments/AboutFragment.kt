@@ -31,7 +31,7 @@ class AboutFragment : Fragment() {
         zoom.doOnEnd {
             zoom.start()
         }
-        zoom.start()
+        //zoom.start()
         val tvLink = viewA.findViewById<TextView>(R.id.tvGitLink)
         tvLink.setOnClickListener {
             val i = Intent(android.content.Intent.ACTION_VIEW)
