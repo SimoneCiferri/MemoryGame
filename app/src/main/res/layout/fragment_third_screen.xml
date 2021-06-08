@@ -30,4 +30,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/ivThirdScreen"
+        android:layout_width="312dp"
+        android:layout_height="607dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/get_the_code_tutorial"
+        android:src="@drawable/thirdscreentutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

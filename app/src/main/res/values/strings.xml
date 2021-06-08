@@ -2,8 +2,8 @@
     <string name="app_name">MemoryGame</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="next">Next</string>
-    <string name="finish">Finish</string>
+    <string name="next"><u>Next</u></string>
+    <string name="finish"><u>Finish</u></string>
     <string name="new_game">New Game</string>
     <string name="save_score">Save Score</string>
     <string name="about">About</string>
@@ -23,14 +23,16 @@
     <string name="position">1</string>
     <string name="player_name">Player Name</string>
     <string name="aboutUs">ABOUT US</string>
-    <string name="mp2021">Mobile Programming 20/21</string>
+    <string name="mp2021">MOBILE PROGRAMMING 20/21</string>
     <string name="ciferri_simone">Ciferri Simone</string>
     <string name="caporro_giulio">Caporro Giulio</string>
-    <string name="gitHubLink">https://github.com/SimoneCiferri/MemoryGame</string>
-    <string name="tvAboutText">Hello dear, are you enjoying the game?.\nI hope so :D!\n\nWe are two computer engineering students of the Mobile Programming course taught by our beloved professor Massimo Regoli
-        and we were pleased to make our work open to the public so that it can be improved in the future. If you are interested...\n\n\nThis is the link.:</string>
+    <string name="gitHubLink"> <u>https://github.com/SimoneCiferri/MemoryGame</u> </string>
+    <string name="tvAboutText">Hello dear, are you enjoying the game?\nI hope so :D!\nWe are two computer engineering students of the Mobile Programming course taught by our beloved professor Massimo Regoli
+        and we were pleased to make our work open to the public so that it can be improved in the future. If you are interested this is the link:</string>
     <string name="match_the_cards_tutorial">Match the cards!</string>
     <string name="save_your_score_tutorial">Save Your Score!</string>
     <string name="get_the_code_tutorial">Get the code for free!</string>
+    <string name="arrowtolink">ArrowToLink</string>
+    <string name="githublogo">GitHub Logo</string>
 
 </resources>

@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.animation.doOnEnd
 import androidx.core.animation.doOnRepeat
 import it.ciferricaporro.memorygame.R
 
@@ -27,6 +28,9 @@ class AboutFragment : Fragment() {
         val zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(arrow)
         zoom.duration = 800
+        zoom.doOnEnd {
+            zoom.start()
+        }
         zoom.start()
         val tvLink = viewA.findViewById<TextView>(R.id.tvGitLink)
         tvLink.setOnClickListener {

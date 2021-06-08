@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.animation.doOnEnd
+import androidx.core.animation.doOnRepeat
 import androidx.viewpager2.widget.ViewPager2
 import it.ciferricaporro.memorygame.R
 
@@ -22,7 +24,10 @@ class FirstScreen : Fragment() {
         val fing = viewF.findViewById<ImageView>(R.id.ivFinger)
         val zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(fing)
-        zoom.duration = 800
+        zoom.duration = 1000
+        zoom.doOnEnd {
+            zoom.start()
+        }
         zoom.start()
 
         val viewP = activity?.findViewById<ViewPager2>(R.id.viewPager)
@@ -35,5 +40,6 @@ class FirstScreen : Fragment() {
 
         return viewF
     }
+
 
 }

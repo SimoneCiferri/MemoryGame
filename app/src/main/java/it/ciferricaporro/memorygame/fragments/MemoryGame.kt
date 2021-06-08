@@ -1,5 +1,6 @@
 package it.ciferricaporro.memorygame.fragments
 
+import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.animation.doOnEnd
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
@@ -24,6 +26,7 @@ class MemoryGame : Fragment() {
     private lateinit var tvErr: TextView
     private var milliS: Long = 0
     private var milliStop: Long = 0
+    private lateinit var zoom: Animator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,13 +69,20 @@ class MemoryGame : Fragment() {
                 updateViews()
                 if(checkAll()){
                     milliStop = System.currentTimeMillis()
+                    zoom.setTarget(btnSaveScore)
+                    zoom.start()
                     btnSaveScore.isVisible = true
                     //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
         }
 
-        viewMG.findViewById<Button>(R.id.btnNewGame).setOnClickListener {
+        val btnStart = viewMG.findViewById<Button>(R.id.btnNewGame)
+        zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
+        zoom.setTarget(btnStart)
+        zoom.duration = 1000
+        zoom.start()
+        btnStart.setOnClickListener {
             newGame()
         }
 

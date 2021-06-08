@@ -32,12 +32,13 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/ivSecondScreen"
         android:layout_width="312dp"
         android:layout_height="607dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/save_your_score_tutorial"
         android:src="@drawable/secondscreentutorial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

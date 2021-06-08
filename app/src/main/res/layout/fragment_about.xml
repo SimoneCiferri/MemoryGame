@@ -24,12 +24,14 @@
     <TextView
         android:id="@+id/tvAbout"
         android:layout_width="375dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/tvAboutText"
         android:textColor="@color/black"
         android:textColorHighlight="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,19 +41,18 @@
         android:id="@+id/ivCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/ciferri_simone"
         android:src="@drawable/simone"
         app:layout_constraintBottom_toTopOf="@+id/tvCiferri"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGitLink"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/ciferri_simone"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -64,18 +65,18 @@
         android:id="@+id/ivCaporro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/caporro_giulio"
         android:src="@drawable/giulio"
         app:layout_constraintBottom_toTopOf="@+id/tvCaporro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGitLink"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/tvCaporro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/caporro_giulio"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -86,8 +87,10 @@
 
     <ImageView
         android:id="@+id/ivArrow"
-        android:layout_width="110dp"
-        android:layout_height="105dp"
+        android:layout_width="85dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/arrowtolink"
         android:src="@drawable/arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -95,28 +98,28 @@
         app:layout_constraintTop_toBottomOf="@+id/tvAbout" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ivGit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/githublogo"
         android:src="@drawable/githublogo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAbout"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintTop_toBottomOf="@+id/ivArrow" />
 
     <TextView
         android:id="@+id/tvGitLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:text="@string/gitHubLink"
         android:textColor="#2196F3"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivGit"
         app:layout_constraintTop_toBottomOf="@+id/ivArrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
