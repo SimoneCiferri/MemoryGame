@@ -13,6 +13,6 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)
 
-    @Query("SELECT * FROM user_table ORDER BY errors, time ASC")
+    @Query("SELECT * FROM user_table ORDER BY time, errors ASC")
     fun readAllData(): LiveData<List<User>>
 }
