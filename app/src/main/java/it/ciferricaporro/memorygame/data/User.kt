@@ -11,6 +11,7 @@ data class User(
     val player: String,
     val time: String,
     val Data: String,
-    val errors: Int
+    val errors: Int,
+    val score: Int
 )
 

@@ -34,5 +34,8 @@
     <string name="get_the_code_tutorial">Get the code for free!</string>
     <string name="arrowtolink">ArrowToLink</string>
     <string name="githublogo">GitHub Logo</string>
+    <string name="cup">cup</string>
+    <string name="scoreShow">Score =</string>
+    <string name="default_score">100000</string>
 
 </resources>

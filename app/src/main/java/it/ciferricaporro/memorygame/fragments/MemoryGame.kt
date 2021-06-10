@@ -8,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.animation.doOnEnd
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
@@ -26,6 +25,7 @@ class MemoryGame : Fragment() {
     private lateinit var tvErr: TextView
     private var milliS: Long = 0
     private var milliStop: Long = 0
+    private var timeInMill: Long = 0
     private lateinit var zoom: Animator
 
     override fun onCreateView(
@@ -87,7 +87,7 @@ class MemoryGame : Fragment() {
         }
 
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
-            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime())
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
     }
@@ -175,16 +175,16 @@ class MemoryGame : Fragment() {
     }
 
     private fun getTime(): String{
-        val time = (milliStop - milliS)
-        var min = ((time/1000)/60).toString()
+        timeInMill = (milliStop - milliS)
+        var min = ((timeInMill/1000)/60).toString()
         if(min == "0"){
             min = "00"
         }
-        var sec = ((time/1000)%60).toString()
+        var sec = ((timeInMill/1000)%60).toString()
         if(sec.toInt() < 10){
             sec = "0" + sec
         }
-        val msec = (((time/10)/10)%10).toString() +((time/10)%10).toString() + (time%10).toString()
+        val msec = (((timeInMill/10)/10)%10).toString() +((timeInMill/10)%10).toString() + (timeInMill%10).toString()
         return min + ":" + sec + ":" + msec
     }
 

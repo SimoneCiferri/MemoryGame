@@ -33,6 +33,7 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
         holder.itemView.findViewById<TextView>(R.id.tvScoreErrors).text = currentItem.errors.toString()
         holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time
         holder.itemView.findViewById<TextView>(R.id.tvScoreData).text = currentItem.Data
+        holder.itemView.findViewById<TextView>(R.id.tvRealScore).text = currentItem.score.toString()
         //holder.itemView.setBackgroundColor(Color.LTGRAY)
 
     }

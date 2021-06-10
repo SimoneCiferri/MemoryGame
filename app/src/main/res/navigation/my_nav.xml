@@ -77,6 +77,10 @@
         <argument
             android:name="timeR"
             app:argType="string"
-            android:defaultValue='"00:00"' />
+            android:defaultValue='"00:00:00"' />
+        <argument
+            android:name="timeInMillis"
+            app:argType="long"
+            android:defaultValue="15000L" />
     </fragment>
 </navigation>
