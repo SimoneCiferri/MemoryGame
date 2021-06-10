@@ -180,7 +180,7 @@ class MemoryGame : Fragment() {
         if(min == "0"){
             min = "00"
         }
-        var sec = ((time/1000)).toString()
+        var sec = ((time/1000)%60).toString()
         if(sec.toInt() < 10){
             sec = "0" + sec
         }
