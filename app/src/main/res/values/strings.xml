@@ -37,5 +37,6 @@
     <string name="cup">cup</string>
     <string name="scoreShow">Score =</string>
     <string name="default_score">100000</string>
+    <string name="iq">Iq</string>
 
 </resources>

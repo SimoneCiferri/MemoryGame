@@ -63,7 +63,7 @@
             android:id="@+id/tvScoreData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
+            android:layout_marginStart="215dp"
             android:layout_marginTop="150dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
@@ -104,7 +104,8 @@
             android:layout_marginTop="65dp"
             android:text="@string/scoreShow"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="italic"/>
 
         <TextView
             android:id="@+id/tvRealScore"
@@ -114,7 +115,19 @@
             android:layout_marginTop="65dp"
             android:text="@string/default_score"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/tvIq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="65dp"
+            android:text="@string/iq"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="italic"/>
 
     </androidx.cardview.widget.CardView>
 
