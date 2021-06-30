@@ -17,5 +17,6 @@ interface UserDao {
     fun readAllData(): LiveData<List<User>>
 
     @Query("SELECT COUNT(*) FROM user_table")
-    fun getCount():Int
+    fun getCount(): Int
+
 }

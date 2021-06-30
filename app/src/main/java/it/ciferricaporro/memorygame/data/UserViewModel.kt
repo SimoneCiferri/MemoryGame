@@ -5,13 +5,13 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<User>>
     private val userDao = UserDatabase.getDatabase(application).userDao()
+    var count: Int = 0
 
     init{
         readAllData = userDao.readAllData()
@@ -20,12 +20,16 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     fun addUser(user: User){
         viewModelScope.launch(Dispatchers.IO) {
         userDao.addUser(user)
-
         }
     }
 
-    fun getDBState(): Int{
-        return userDao.getCount()
+    fun getC(): Int{
+        val job = viewModelScope.launch(Dispatchers.IO) {
+            count = userDao.getCount()
+        }
+        while(job.isActive){}
+        return count
     }
+
 
 }

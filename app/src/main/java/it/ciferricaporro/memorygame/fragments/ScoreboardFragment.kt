@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.UserViewModel
 import it.ciferricaporro.memorygame.recyclerView.ScoreboardAdapter
-import kotlinx.android.synthetic.main.fragment_scoreboard.*
 
 class ScoreboardFragment : Fragment() {
 
@@ -43,11 +42,10 @@ class ScoreboardFragment : Fragment() {
         })
 
         val tvNoScore = viewSC.findViewById<TextView>(R.id.tvNoScore)
-        // provo a capire se ci sono user nel DB
-        if(recyclerView.adapter!!.itemCount > 0){
+        Log.w("NAMO", userViewModel.getC().toString())
+        if(userViewModel.getC() > 0){
             tvNoScore.isVisible = false
         }
-
         return viewSC
     }
 
