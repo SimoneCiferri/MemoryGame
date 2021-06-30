@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setOSTNow(){
         mp = MediaPlayer.create(this@MainActivity, R.raw.memorygameost)
+        mp.isLooping = true
         mp.start()
     }
 }
