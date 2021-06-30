@@ -1,6 +1,7 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,10 +15,13 @@ import androidx.recyclerview.widget.RecyclerView
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.UserViewModel
 import it.ciferricaporro.memorygame.recyclerView.ScoreboardAdapter
+import kotlinx.android.synthetic.main.fragment_scoreboard.*
 
 class ScoreboardFragment : Fragment() {
 
     private lateinit var userViewModel: UserViewModel
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
