@@ -15,4 +15,5 @@ interface UserDao {
 
     @Query("SELECT * FROM user_table ORDER BY score DESC")
     fun readAllData(): LiveData<List<User>>
+
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,8 +26,6 @@ class ScoreboardFragment : Fragment() {
         // Inflate the layout for this fragment
         val viewSC = inflater.inflate(R.layout.fragment_scoreboard, container, false)
 
-        val tvNoScore = viewSC.findViewById<TextView>(R.id.tvNoScore)
-
         //Recyclerview
         val adapter = ScoreboardAdapter()
         val recyclerView = viewSC.findViewById<RecyclerView>(R.id.recyclerViewScore)
@@ -39,6 +38,14 @@ class ScoreboardFragment : Fragment() {
             adapter.setData(user)
         })
 
+        val tvNoScore = viewSC.findViewById<TextView>(R.id.tvNoScore)
+        // provo a capire se ci sono user nel DB
+        if(recyclerView.adapter!!.itemCount > 0){
+            tvNoScore.isVisible = false
+        }
+
         return viewSC
     }
+
+
 }
