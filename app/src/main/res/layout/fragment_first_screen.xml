@@ -39,7 +39,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/match_the_cards_tutorial"
-        android:src="@drawable/firstscreentutorial"
+        android:src="@drawable/first_tut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
