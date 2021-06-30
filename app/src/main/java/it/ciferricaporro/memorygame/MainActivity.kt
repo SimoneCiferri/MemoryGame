@@ -17,16 +17,16 @@ class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var binding: ActivityMainBinding
     }
+    private lateinit var mp: MediaPlayer
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setOST()
+
         setContentView(binding.root)
         setBottomNav()
-
-
+        setOSTNow()
     }
 
     private fun setBottomNav(){
@@ -37,10 +37,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    private fun setOST() = runBlocking{launch{
-        val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.memorygameost)
-        //loop
-        //mediaPlayer?.isLooping(true)
-        mediaPlayer.start() }
+    private fun setOSTNow(){
+        mp = MediaPlayer.create(this@MainActivity, R.raw.memorygameost)
+        mp.start()
     }
 }
