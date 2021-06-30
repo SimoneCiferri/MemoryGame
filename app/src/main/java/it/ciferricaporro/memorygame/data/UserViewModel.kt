@@ -24,4 +24,8 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun getDBState(): Int{
+        return userDao.getCount()
+    }
+
 }

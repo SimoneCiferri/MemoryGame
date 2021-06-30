@@ -16,4 +16,6 @@ interface UserDao {
     @Query("SELECT * FROM user_table ORDER BY score DESC")
     fun readAllData(): LiveData<List<User>>
 
+    @Query("SELECT COUNT(*) FROM user_table")
+    fun getCount():Int
 }
