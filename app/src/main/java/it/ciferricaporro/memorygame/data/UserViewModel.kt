@@ -11,7 +11,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
 
     val readAllData: LiveData<List<User>>
     private val userDao = UserDatabase.getDatabase(application).userDao()
-    var count: Int = 0
+    private var count: Int = 0
 
     init{
         readAllData = userDao.readAllData()
