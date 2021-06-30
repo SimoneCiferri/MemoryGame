@@ -2,6 +2,7 @@ package it.ciferricaporro.memorygame.fragments
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,9 @@ import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 
 class MemoryGame : Fragment() {
@@ -36,6 +40,7 @@ class MemoryGame : Fragment() {
         binding.bottomNavigationView.isVisible = true
         setUiController(viewMG)
         return viewMG
+
     }
 
     private fun setUiController(viewMG: View){
@@ -90,6 +95,7 @@ class MemoryGame : Fragment() {
             val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
+
     }
 
     private fun updateViews(){
