@@ -3,6 +3,7 @@ package it.ciferricaporro.memorygame
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.isVisible
 import androidx.lifecycle.viewModelScope
@@ -10,14 +11,16 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import it.ciferricaporro.memorygame.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.fragment_memory_game.*
 import kotlinx.coroutines.*
 
 
 class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var binding: ActivityMainBinding
+        lateinit var mp: MediaPlayer
     }
-    private lateinit var mp: MediaPlayer
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setBottomNav()
         setOSTNow()
+
     }
 
     private fun setBottomNav(){

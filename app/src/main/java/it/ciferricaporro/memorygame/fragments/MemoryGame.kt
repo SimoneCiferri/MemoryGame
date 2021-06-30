@@ -2,6 +2,7 @@ package it.ciferricaporro.memorygame.fragments
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
+import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,9 +12,12 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
+import it.ciferricaporro.memorygame.MainActivity
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
+import it.ciferricaporro.memorygame.MainActivity.Companion.mp
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
+import kotlinx.android.synthetic.main.fragment_memory_game.*
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -31,6 +35,8 @@ class MemoryGame : Fragment() {
     private var milliStop: Long = 0
     private var timeInMill: Long = 0
     private lateinit var zoom: Animator
+    //companion object giulio
+    var ost = mp
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -94,6 +100,15 @@ class MemoryGame : Fragment() {
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
             val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
             Navigation.findNavController(viewMG).navigate(navToSave)
+        }
+
+        viewMG.findViewById<ImageView>(R.id.imageAudio).setOnClickListener{
+            if (mp.isPlaying){
+                imageAudio.setImageResource(R.drawable.volume_off)
+                ost.pause()}
+            else{
+                imageAudio.setImageResource(R.drawable.volume_up)
+                ost.start()}
         }
 
     }
@@ -161,7 +176,7 @@ class MemoryGame : Fragment() {
     }
 
     private fun newGame(){
-        //images.shuffle()
+        images.shuffle()
         cards = buttons.indices.map { index ->
             Card(images[index])
         }
