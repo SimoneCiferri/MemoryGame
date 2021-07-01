@@ -172,7 +172,7 @@ class MemoryGame : Fragment() {
     }
 
     private fun newGame(){
-        images.shuffle()
+        //images.shuffle()
         cards = buttons.indices.map { index ->
             Card(images[index])
         }

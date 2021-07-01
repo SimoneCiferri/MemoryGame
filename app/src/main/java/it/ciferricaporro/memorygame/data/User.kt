@@ -12,6 +12,7 @@ data class User(
     val time: String,
     val Data: String,
     val errors: Int,
-    val score: Int
+    val score: Int,
+    val achievements: Int
 )
 
