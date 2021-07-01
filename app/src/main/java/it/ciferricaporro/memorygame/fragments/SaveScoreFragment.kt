@@ -37,7 +37,7 @@ class SaveScoreFragment : Fragment() {
 
         viewSC.findViewById<TextView>(R.id.tvErrReview).text = "Errors = " + args.err.toString()
         viewSC.findViewById<TextView>(R.id.tvTimeReview).text = "Time = " + args.timeR
-        score = (SCORE_CONSTANT/(args.err + args.timeInMillis/2))
+        score = (SCORE_CONSTANT/(args.timeInMillis/2 - args.err))
         viewSC.findViewById<TextView>(R.id.tvScore).text = "Score = " + score.toString()
 
         val etPlayerName = viewSC.findViewById<EditText>(R.id.etPlayerName)
