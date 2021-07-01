@@ -41,7 +41,6 @@ class MemoryGame : Fragment() {
         binding.bottomNavigationView.isVisible = true
         setUiController(viewMG)
         return viewMG
-
     }
 
     private fun setUiController(viewMG: View){
@@ -173,7 +172,7 @@ class MemoryGame : Fragment() {
     }
 
     private fun newGame(){
-        //images.shuffle()
+        images.shuffle()
         cards = buttons.indices.map { index ->
             Card(images[index])
         }

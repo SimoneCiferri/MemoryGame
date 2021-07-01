@@ -21,7 +21,7 @@ class SaveScoreFragment : Fragment() {
 
     private lateinit var userViewModel: UserViewModel
     private val args: SaveScoreFragmentArgs by navArgs()
-    private val SCORE_CONSTANT: Int = 300000000
+    private val SCORE_CONSTANT: Int = 3000000
     private var score: Long = 0
 
     override fun onCreateView(
