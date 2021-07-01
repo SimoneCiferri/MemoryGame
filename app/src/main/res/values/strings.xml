@@ -36,7 +36,7 @@
     <string name="githublogo">GitHub Logo</string>
     <string name="cup">cup</string>
     <string name="scoreShow">Score =</string>
-    <string name="default_score">100000</string>
+    <string name="default_score">10000</string>
     <string name="iq">Iq</string>
     <string name="scoreboard_allcaps">SCOREBOARD</string>
     <string name="follow_us">FOLLOW US</string>

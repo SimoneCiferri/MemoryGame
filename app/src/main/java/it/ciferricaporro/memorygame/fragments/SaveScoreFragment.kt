@@ -21,7 +21,7 @@ class SaveScoreFragment : Fragment() {
 
     private lateinit var userViewModel: UserViewModel
     private val args: SaveScoreFragmentArgs by navArgs()
-    private val SCORE_CONSTANT: Int = 3000000
+    private val SCORE_CONSTANT: Int = 30000000
     private var score: Long = 0
 
     override fun onCreateView(
@@ -78,16 +78,16 @@ class SaveScoreFragment : Fragment() {
     }
 
     private fun checkAchievements(score: Int):Int{
-        if(score < 500){
+        if(score < 5000){
             return 0
         }
-        if(score > 500 && score < 700){
+        if(score > 5000 && score < 7000){
             return 1
         }
-        if(score > 700 && score < 900){
+        if(score > 7000 && score < 9000){
             return 2
         }
-        if(score > 900 && score < 1000){
+        if(score > 9000 && score < 10000){
             return 3
         }
         else return 4
