@@ -211,7 +211,7 @@ class MemoryGame : Fragment() {
 
     private fun flipCard(btn: ImageButton){
         val flip = AnimatorInflater.loadAnimator(requireContext(), R.animator.flip)
-        flip.duration = 250
+        flip.duration = 350
         flip.setTarget(btn)
         flip.start()
     }
