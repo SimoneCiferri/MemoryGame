@@ -41,7 +41,7 @@
         android:id="@+id/ivCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="65dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/ciferri_simone"
         android:src="@drawable/simone"
@@ -52,7 +52,7 @@
         android:id="@+id/tvCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="@string/ciferri_simone"
         android:textColor="#000000"
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="65dp"
         android:contentDescription="@string/caporro_giulio"
         android:src="@drawable/giulio"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/caporro_giulio"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -125,17 +125,17 @@
         android:id="@+id/tvFollowUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="@string/follow_us"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivGit" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivFacebCiferri"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -145,12 +145,52 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCiferri" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/ivFacebCaporro"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/facebook"
+        app:layout_constraintEnd_toStartOf="@+id/ivInstaCaporro"
+        app:layout_constraintTop_toBottomOf="@+id/tvCaporro" />
+
+    <ImageView
+        android:id="@+id/ivInstaCiferri"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintStart_toEndOf="@+id/ivFacebCiferri"
+        app:layout_constraintTop_toBottomOf="@+id/tvCiferri" />
+
+    <ImageView
+        android:id="@+id/ivInstaCaporro"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintEnd_toStartOf="@+id/ivGitCaporro"
+        app:layout_constraintTop_toBottomOf="@+id/tvCaporro" />
+
+    <ImageView
+        android:id="@+id/ivGitCiferri"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/githublogo"
+        app:layout_constraintStart_toEndOf="@+id/ivInstaCiferri"
+        app:layout_constraintTop_toBottomOf="@+id/tvCiferri" />
+
+    <ImageView
+        android:id="@+id/ivGitCaporro"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/githublogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCaporro" />
 
