@@ -52,7 +52,7 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
             holder.itemView.findViewById<ImageView>(R.id.ivAchStar1).setImageResource(R.drawable.ach_star_reached)
             holder.itemView.findViewById<ImageView>(R.id.ivAchStar2).setImageResource(R.drawable.ach_star_reached)
             holder.itemView.findViewById<ImageView>(R.id.ivAchStar3).setImageResource(R.drawable.ach_star_reached)
-            holder.itemView.findViewById<ImageView>(R.id.ivBestPlayerEU).isVisible = true
+            holder.itemView.findViewById<ImageView>(R.id.ivBestPlayerITA).isVisible = true
         }
     }
 

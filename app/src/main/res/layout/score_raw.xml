@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="150dp"
             android:layout_marginBottom="16dp"
             android:text="@string/defaultErrors"
             android:textColor="#FFFFFF"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="110dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="107dp"
             android:layout_marginBottom="16dp"
             android:text="@string/defaultTime"
             android:textColor="#ffff"
@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="150dp"
             android:layout_marginBottom="16dp"
             android:text="@string/errorsInfo"
             android:textColor="#FFFFFF"
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="107dp"
             android:layout_marginBottom="16dp"
             android:text="@string/timeInfo"
             android:textColor="#FFFFFF"
@@ -153,13 +153,13 @@
             app:srcCompat="@drawable/ach_star" />
 
         <ImageView
-            android:id="@+id/ivBestPlayerEU"
+            android:id="@+id/ivBestPlayerITA"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginStart="248dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="68dp"
             android:visibility="invisible"
-            app:srcCompat="@drawable/bestplayereu"
+            app:srcCompat="@drawable/bestplayerita"
             tools:visibility="invisible" />
 
     </androidx.cardview.widget.CardView>
