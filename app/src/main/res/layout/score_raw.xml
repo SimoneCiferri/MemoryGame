@@ -159,7 +159,7 @@
             android:layout_marginStart="248dp"
             android:layout_marginTop="70dp"
             android:visibility="invisible"
-            app:srcCompat="@drawable/coppa"
+            app:srcCompat="@drawable/bestplayereu"
             tools:visibility="invisible" />
 
     </androidx.cardview.widget.CardView>
