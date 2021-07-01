@@ -36,6 +36,12 @@ class ScoreboardAdapter: RecyclerView.Adapter<ScoreboardAdapter.MyViewHolder>() 
         holder.itemView.findViewById<TextView>(R.id.tvScoreTime).text = currentItem.time
         holder.itemView.findViewById<TextView>(R.id.tvScoreData).text = currentItem.Data
         holder.itemView.findViewById<TextView>(R.id.tvRealScore).text = currentItem.score.toString()
+        if(currentItem.achievements == 0){
+            holder.itemView.findViewById<ImageView>(R.id.ivAchStar1).setImageResource(R.drawable.ach_star)
+            holder.itemView.findViewById<ImageView>(R.id.ivAchStar2).setImageResource(R.drawable.ach_star)
+            holder.itemView.findViewById<ImageView>(R.id.ivAchStar3).setImageResource(R.drawable.ach_star)
+            holder.itemView.findViewById<ImageView>(R.id.ivBestPlayerITA).isVisible = false
+        }
         if(currentItem.achievements == 1){
             holder.itemView.findViewById<ImageView>(R.id.ivAchStar1).setImageResource(R.drawable.ach_star_reached)
                 }

@@ -35,10 +35,19 @@
     <string name="arrowtolink">ArrowToLink</string>
     <string name="githublogo">GitHub Logo</string>
     <string name="cup">cup</string>
-    <string name="scoreShow">Score =</string>
+    <string name="scoreShow">Score = </string>
     <string name="default_score">10000</string>
     <string name="iq">Iq</string>
     <string name="scoreboard_allcaps">SCOREBOARD</string>
     <string name="follow_us">FOLLOW US</string>
+    <string name="facebookLinkCiferri">https://www.facebook.com/simone.ciferri.52</string>
+    <string name="facebookLinkCaporro">https://www.facebook.com/giulio.caporro.7</string>
+    <string name="instaLinkCiferri">https://www.instagram.com/simone_ciferri/</string>
+    <string name="instaLinkCaporro">https://www.instagram.com/giuliocaporro/</string>
+    <string name="gitLinkCiferri">https://github.com/SimoneCiferri</string>
+    <string name="gitLinkCaporro">https://github.com/giuliocapo</string>
+    <string name="scoreSaved">Score Saved!</string>
+    <string name="fillAllFieldsWarning">Please fill out all fields!</string>
+    <string name="playerNameTooLong">Player name too long!!</string>
 
 </resources>

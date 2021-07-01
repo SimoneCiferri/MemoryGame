@@ -32,10 +32,53 @@ class AboutFragment : Fragment() {
             zoom.start()
         }
         zoom.start()
+
         val tvLink = viewA.findViewById<TextView>(R.id.tvGitLink)
         tvLink.setOnClickListener {
             val i = Intent(android.content.Intent.ACTION_VIEW)
             i.data = Uri.parse(tvLink.text.toString())
+            startActivity(i)
+        }
+
+        val ivFacCi = viewA.findViewById<ImageView>(R.id.ivFacebCiferri)
+        ivFacCi.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.facebookLinkCiferri))
+            startActivity(i)
+        }
+
+        val ivFacCa = viewA.findViewById<ImageView>(R.id.ivFacebCaporro)
+        ivFacCa.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.facebookLinkCaporro))
+            startActivity(i)
+        }
+
+        val ivInstaCi = viewA.findViewById<ImageView>(R.id.ivInstaCiferri)
+        ivInstaCi.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.instaLinkCiferri))
+            startActivity(i)
+        }
+
+        val ivInstaCa = viewA.findViewById<ImageView>(R.id.ivInstaCaporro)
+        ivInstaCa.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.instaLinkCaporro))
+            startActivity(i)
+        }
+
+        val ivGitCi = viewA.findViewById<ImageView>(R.id.ivGitCiferri)
+        ivGitCi.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.gitLinkCiferri))
+            startActivity(i)
+        }
+
+        val ivGitCa = viewA.findViewById<ImageView>(R.id.ivGitCaporro)
+        ivGitCa.setOnClickListener {
+            val i = Intent(android.content.Intent.ACTION_VIEW)
+            i.data = Uri.parse(getString(R.string.gitLinkCaporro))
             startActivity(i)
         }
 

@@ -35,15 +35,15 @@ class SaveScoreFragment : Fragment() {
             insertDataToDB(viewSC)
         }
 
-        viewSC.findViewById<TextView>(R.id.tvErrReview).text = "Errors = " + args.err.toString()
-        viewSC.findViewById<TextView>(R.id.tvTimeReview).text = "Time = " + args.timeR
+        viewSC.findViewById<TextView>(R.id.tvErrReview).text = getString(R.string.errorsInfo) + args.err.toString()
+        viewSC.findViewById<TextView>(R.id.tvTimeReview).text = getString(R.string.timeInfo) + args.timeR
         score = (SCORE_CONSTANT/(args.timeInMillis/2 - args.err))
-        viewSC.findViewById<TextView>(R.id.tvScore).text = "Score = " + score.toString()
+        viewSC.findViewById<TextView>(R.id.tvScore).text = getString(R.string.scoreShow) + score.toString()
 
         val etPlayerName = viewSC.findViewById<EditText>(R.id.etPlayerName)
         etPlayerName.doAfterTextChanged {
             if(etPlayerName.text.toString().length > 10){
-                Toast.makeText(requireContext(), "Player name too long!!", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.playerNameTooLong), Toast.LENGTH_LONG).show()
                 etPlayerName.setText("")
             }
         }
@@ -65,11 +65,11 @@ class SaveScoreFragment : Fragment() {
         if(inputCheck(playerName)){
             val user = User(0, playerName, time, currentDate, errs, scoreP, achiev)
             userViewModel.addUser(user)
-            Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), getString(R.string.scoreSaved), Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()
             Navigation.findNavController(viewSC).navigate(navToScore)
         }else{
-            Toast.makeText(requireContext(), "Please fill out all fields!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), getString(R.string.fillAllFieldsWarning), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -78,16 +78,16 @@ class SaveScoreFragment : Fragment() {
     }
 
     private fun checkAchievements(score: Int):Int{
-        if(score < 5000){
+        if(score < 4000){
             return 0
         }
-        if(score > 5000 && score < 7000){
+        if(score > 4000 && score < 5000){
             return 1
         }
-        if(score > 7000 && score < 9000){
+        if(score > 5000 && score < 6500){
             return 2
         }
-        if(score > 9000 && score < 10000){
+        if(score > 6500 && score < 8000){
             return 3
         }
         else return 4
