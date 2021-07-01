@@ -35,7 +35,7 @@ class MemoryGame : Fragment() {
     private var milliStop: Long = 0
     private var timeInMill: Long = 0
     private lateinit var zoom: Animator
-    //companion object giulio
+    //companion object OST giulio
     var ost = mp
 
     override fun onCreateView(
