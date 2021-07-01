@@ -15,6 +15,7 @@ import it.ciferricaporro.memorygame.MainActivity.Companion.mp
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
 import kotlinx.android.synthetic.main.fragment_memory_game.*
+import kotlinx.coroutines.delay
 
 
 class MemoryGame : Fragment() {
@@ -183,6 +184,9 @@ class MemoryGame : Fragment() {
         for(btn in buttons){
             btn.isEnabled = true
         }
+        for(btn in buttons){
+            flipCard(btn)
+        }
         tvErr.text = "0"
         btnSaveScore.isVisible = false
         indexOfSelectedCarrd = null
@@ -220,5 +224,7 @@ class MemoryGame : Fragment() {
             ibVolume.setImageResource(R.drawable.volume_off)
         }
     }
+
+
 
 }
