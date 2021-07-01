@@ -46,4 +46,14 @@ class MainActivity : AppCompatActivity() {
         mp.isLooping = true
         mp.start()
     }
+
+    override fun onPause() {
+        super.onPause()
+        mp.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mp.start()
+    }
 }
