@@ -103,7 +103,7 @@ class MemoryGame : Fragment() {
         }
 
         viewMG.findViewById<ImageView>(R.id.imageAudio).setOnClickListener{
-            if (mp.isPlaying){
+            if (ost.isPlaying){
                 imageAudio.setImageResource(R.drawable.volume_off)
                 ost.pause()}
             else{
