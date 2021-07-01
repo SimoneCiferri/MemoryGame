@@ -6,6 +6,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
+import kotlinx.coroutines.GlobalScope.coroutineContext
+import kotlin.coroutines.coroutineContext
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
@@ -24,12 +26,13 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun getC(): Int{
-        val job = viewModelScope.launch(Dispatchers.IO) {
+        val job =  (viewModelScope.launch(Dispatchers.IO) {
             count = userDao.getCount()
-        }
+        })
         while(job.isActive){}
         return count
     }
+
 
 
 }
