@@ -33,7 +33,6 @@
         android:textColor="@color/black"
         android:textColorHighlight="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAbout1" />
@@ -42,57 +41,55 @@
         android:id="@+id/ivCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/ciferri_simone"
         android:src="@drawable/simone"
-        app:layout_constraintBottom_toTopOf="@+id/tvCiferri"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowUs" />
 
     <TextView
         android:id="@+id/tvCiferri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/ciferri_simone"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCiferri" />
 
     <ImageView
         android:id="@+id/ivCaporro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
         android:contentDescription="@string/caporro_giulio"
         android:src="@drawable/giulio"
-        app:layout_constraintBottom_toTopOf="@+id/tvCaporro"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowUs" />
 
     <TextView
         android:id="@+id/tvCaporro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/caporro_giulio"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ivCaporro" />
 
     <ImageView
         android:id="@+id/ivArrow"
-        android:layout_width="85dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/arrowtolink"
         android:src="@drawable/arrow"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/githublogo"
         android:src="@drawable/githublogo"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +112,7 @@
         android:id="@+id/tvGitLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="@string/gitHubLink"
         android:textColor="#2196F3"
         android:textSize="14sp"
@@ -123,5 +120,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivGit"
         app:layout_constraintTop_toBottomOf="@+id/ivArrow" />
+
+    <TextView
+        android:id="@+id/tvFollowUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/follow_us"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivGit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

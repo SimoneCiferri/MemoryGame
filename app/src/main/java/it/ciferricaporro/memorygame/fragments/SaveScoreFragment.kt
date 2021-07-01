@@ -21,7 +21,7 @@ class SaveScoreFragment : Fragment() {
 
     private lateinit var userViewModel: UserViewModel
     private val args: SaveScoreFragmentArgs by navArgs()
-    private val SCORE_CONSTANT: Int = 300000000
+    private val SCORE_CONSTANT: Int = 3000000
     private var score: Long = 0
 
     override fun onCreateView(
@@ -56,13 +56,14 @@ class SaveScoreFragment : Fragment() {
         val errs = args.err
         val time = args.timeR
         val scoreP =  score.toInt()
+        val achiev = checkAchievements(scoreP)
 
         val calendar : java.util.Calendar = java.util.Calendar.getInstance()
         val currentDate : String = DateFormat.getDateInstance().format(calendar.time)
 
 
         if(inputCheck(playerName)){
-            val user = User(0, playerName, time, currentDate, errs, scoreP)
+            val user = User(0, playerName, time, currentDate, errs, scoreP, achiev)
             userViewModel.addUser(user)
             Toast.makeText(requireContext(), "Score Saved!", Toast.LENGTH_LONG).show()
             val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()
@@ -74,6 +75,22 @@ class SaveScoreFragment : Fragment() {
 
     private fun inputCheck(firstName: String) :Boolean{
         return !(TextUtils.isEmpty(firstName))
+    }
+
+    private fun checkAchievements(score: Int):Int{
+        if(score < 500){
+            return 0
+        }
+        if(score > 500 && score < 700){
+            return 1
+        }
+        if(score > 700 && score < 900){
+            return 2
+        }
+        if(score > 900 && score < 1000){
+            return 3
+        }
+        else return 4
     }
 
 }

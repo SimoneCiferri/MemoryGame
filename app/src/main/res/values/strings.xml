@@ -39,5 +39,6 @@
     <string name="default_score">100000</string>
     <string name="iq">Iq</string>
     <string name="scoreboard_allcaps">SCOREBOARD</string>
+    <string name="follow_us">FOLLOW US</string>
 
 </resources>

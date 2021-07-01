@@ -41,7 +41,6 @@ class MemoryGame : Fragment() {
         binding.bottomNavigationView.isVisible = true
         setUiController(viewMG)
         return viewMG
-
     }
 
     private fun setUiController(viewMG: View){
