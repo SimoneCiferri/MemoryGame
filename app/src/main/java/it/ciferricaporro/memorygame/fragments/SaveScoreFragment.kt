@@ -79,13 +79,13 @@ class SaveScoreFragment : Fragment() {
     }
 
     private fun checkAchievements(score: Int):Int{
-        if(score < 5000){
+        if(score < 5500){
             return 0
         }
-        if(score > 5000 && score < 6500){
+        if(score > 5500 && score < 7000){
             return 1
         }
-        if(score > 6500 && score < 8500){
+        if(score > 7000 && score < 8500){
             return 2
         }
         if(score > 8500 && score < 10000){
