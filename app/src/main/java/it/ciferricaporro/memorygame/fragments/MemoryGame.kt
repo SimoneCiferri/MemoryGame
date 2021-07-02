@@ -12,6 +12,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import it.ciferricaporro.memorygame.MainActivity.Companion.binding
 import it.ciferricaporro.memorygame.MainActivity.Companion.mp
+import it.ciferricaporro.memorygame.MainActivity.Companion.mpState
 import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.model.Card
 import kotlinx.android.synthetic.main.fragment_memory_game.*
@@ -101,10 +102,14 @@ class MemoryGame : Fragment() {
         ibVolume.setOnClickListener{
             if (ost.isPlaying){
                 imageAudio.setImageResource(R.drawable.volume_off)
-                ost.pause()}
+                ost.pause()
+                mpState = false
+            }
             else{
                 imageAudio.setImageResource(R.drawable.volume_up)
-                ost.start()}
+                ost.start()
+                mpState = true
+            }
         }
 
     }
@@ -218,9 +223,11 @@ class MemoryGame : Fragment() {
     private fun volumeIcSet(ibVolume: ImageView) {
         if (ost.isPlaying){
             ibVolume.setImageResource(R.drawable.volume_up)
+            mpState = true
         }
         else{
             ibVolume.setImageResource(R.drawable.volume_off)
+            mpState = false
         }
     }
 

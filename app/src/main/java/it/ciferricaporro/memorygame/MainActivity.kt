@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var binding: ActivityMainBinding
         lateinit var mp: MediaPlayer
+        val MP_STATE = "mpState"
+        var mpState: Boolean = false
     }
 
 
@@ -45,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         mp = MediaPlayer.create(this@MainActivity, R.raw.memorygameost)
         mp.isLooping = true
         mp.start()
+        mpState = true
     }
 
     override fun onPause() {
@@ -54,6 +57,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        mp.start()
+        if(mpState){
+            mp.start()
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putBoolean(MP_STATE, mp.isPlaying)
+        super.onSaveInstanceState(outState)
     }
 }
