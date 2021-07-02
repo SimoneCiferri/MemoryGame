@@ -37,7 +37,8 @@ class SaveScoreFragment : Fragment() {
 
         viewSC.findViewById<TextView>(R.id.tvErrReview).text = getString(R.string.errorsInfo) + args.err.toString()
         viewSC.findViewById<TextView>(R.id.tvTimeReview).text = getString(R.string.timeInfo) + args.timeR
-        score = (SCORE_CONSTANT/(args.timeInMillis/2 - args.err))
+        //nel caso fossero 8sec e 0 errori, bestTime, score = 15000
+        score = (SCORE_CONSTANT/(args.timeInMillis/3 + 100*(args.err)))
         viewSC.findViewById<TextView>(R.id.tvScore).text = getString(R.string.scoreShow) + score.toString()
 
         val etPlayerName = viewSC.findViewById<EditText>(R.id.etPlayerName)
@@ -81,13 +82,13 @@ class SaveScoreFragment : Fragment() {
         if(score < 4000){
             return 0
         }
-        if(score > 4000 && score < 5000){
+        if(score > 5000 && score < 6500){
             return 1
         }
-        if(score > 5000 && score < 6500){
+        if(score > 6500 && score < 8500){
             return 2
         }
-        if(score > 6500 && score < 8000){
+        if(score > 8500 && score < 10000){
             return 3
         }
         else return 4
