@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MemoryGame</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="next"><u>Next</u></string>
     <string name="finish"><u>Finish</u></string>
     <string name="new_game">New Game</string>
@@ -9,43 +9,43 @@
     <string name="about">About</string>
     <string name="game">Game</string>
     <string name="scoreboard">Scoreboard</string>
-    <string name="_defaultErr">0</string>
-    <string name="stop">Stop Timer</string>
-    <string name="start">Start Timer</string>
-    <string name="working">Started</string>
-    <string name="stopped">Stopped</string>
+    <string name="_defaultErr" translatable="false">0</string>
+    <string name="stop" translatable="false">Stop Timer</string>
+    <string name="start" translatable="false">Start Timer</string>
+    <string name="working" translatable="false">Started</string>
+    <string name="stopped" translatable="false">Stopped</string>
     <string name="errorsInfo">Errors = </string>
-    <string name="dateInfo"> mmm dd, yyyy</string>
+    <string name="dateInfo" translatable="false"> mmm dd, yyyy</string>
     <string name="timeInfo">Time = </string>
-    <string name="defaultErrors">0</string>
-    <string name="defaultTime">00.05</string>
+    <string name="defaultErrors" translatable="false">0</string>
+    <string name="defaultTime" translatable="false">00.05</string>
     <string name="playerName">Player1</string>
-    <string name="position">1</string>
+    <string name="position" translatable="false">1</string>
     <string name="player_name">Player Name</string>
     <string name="aboutUs">ABOUT US</string>
-    <string name="mp2021">MOBILE PROGRAMMING 20/21</string>
-    <string name="ciferri_simone">Ciferri Simone</string>
-    <string name="caporro_giulio">Caporro Giulio</string>
-    <string name="gitHubLink">https://github.com/SimoneCiferri/MemoryGame</string>
+    <string name="mp2021" translatable="false">MOBILE PROGRAMMING 20/21</string>
+    <string name="ciferri_simone" translatable="false">Ciferri Simone</string>
+    <string name="caporro_giulio" translatable="false">Caporro Giulio</string>
+    <string name="gitHubLink" translatable="false">https://github.com/SimoneCiferri/MemoryGame</string>
     <string name="tvAboutText">Hello dear, are you enjoying the game?\nI hope so :D!\nWe are two computer engineering students of the Mobile Programming course taught by our beloved professor Massimo Regoli
         and we were pleased to make our work open to the public so that it can be improved in the future. If you are interested this is the link:</string>
     <string name="match_the_cards_tutorial">Match the cards!</string>
     <string name="save_your_score_tutorial">Save Your Score!</string>
     <string name="get_the_code_tutorial">Get the code for free!</string>
-    <string name="arrowtolink">ArrowToLink</string>
-    <string name="githublogo">GitHub Logo</string>
-    <string name="cup">cup</string>
+    <string name="arrowtolink" translatable="false">ArrowToLink</string>
+    <string name="githublogo" translatable="false">GitHub Logo</string>
+    <string name="cup" translatable="false">cup</string>
     <string name="scoreShow">Score = </string>
-    <string name="default_score">10000</string>
-    <string name="iq">Iq</string>
+    <string name="default_score" translatable="false">10000</string>
+    <string name="iq" translatable="false">Iq</string>
     <string name="scoreboard_allcaps">SCOREBOARD</string>
     <string name="follow_us">FOLLOW US</string>
-    <string name="facebookLinkCiferri">https://www.facebook.com/simone.ciferri.52</string>
-    <string name="facebookLinkCaporro">https://www.facebook.com/giulio.caporro.7</string>
-    <string name="instaLinkCiferri">https://www.instagram.com/simone_ciferri/</string>
-    <string name="instaLinkCaporro">https://www.instagram.com/giuliocaporro/</string>
-    <string name="gitLinkCiferri">https://github.com/SimoneCiferri</string>
-    <string name="gitLinkCaporro">https://github.com/giuliocapo</string>
+    <string name="facebookLinkCiferri" translatable="false">https://www.facebook.com/simone.ciferri.52</string>
+    <string name="facebookLinkCaporro" translatable="false">https://www.facebook.com/giulio.caporro.7</string>
+    <string name="instaLinkCiferri" translatable="false">https://www.instagram.com/simone_ciferri/</string>
+    <string name="instaLinkCaporro" translatable="false">https://www.instagram.com/giuliocaporro/</string>
+    <string name="gitLinkCiferri" translatable="false">https://github.com/SimoneCiferri</string>
+    <string name="gitLinkCaporro" translatable="false">https://github.com/giuliocapo</string>
     <string name="scoreSaved">Score Saved!</string>
     <string name="fillAllFieldsWarning">Please fill out all fields!</string>
     <string name="playerNameTooLong">Player name too long!!</string>
