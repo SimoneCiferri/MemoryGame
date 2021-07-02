@@ -23,4 +23,6 @@
     <string name="playerName">Giocatore1</string>
     <string name="game">Gioco</string>
     <string name="tvAboutText">Ciao, ti stai divertendo con il gioco? Lo spero :D! Siamo due studenti di ingegneria informatica del corso di Programmazione Mobile tenuto dal nostro amato professore Massimo Regoli e siamo stati lieti di rendere il nostro lavoro aperto al pubblico in modo che possa essere migliorato in futuro. Se ti interessa questo è il link</string>
+    <string name="cup">coppa</string>
+    <string name="arrowtolink">FrecciaAlLink</string>
 </resources>
