@@ -6,13 +6,12 @@
     <string name="about">Info</string>
     <string name="scoreboard">Classifica</string>
     <string name="errorsInfo">"Errori = "</string>
-    <string name="timeInfo">"Tempo = "</string>
+    <string name="timeInfo">Tempo=</string>
     <string name="aboutUs">CHI SIAMO</string>
-    <string name="tvAboutText">Ciao cara, ti stai divertendo con il gioco?\\nLo spero :D!\\nSiamo due studenti di ingegneria informatica del corso di Mobile Programming tenuto dal nostro amato professore Massimo Regoli e siamo lieti di rendere il nostro lavoro aperto al pubblico in modo che possa essere migliorato in futuro. Se ti interessa questo è il link:</string>
     <string name="match_the_cards_tutorial">Abbina le carte!</string>
     <string name="save_your_score_tutorial">Salva il tuo punteggio!</string>
     <string name="get_the_code_tutorial">Ottieni il codice gratuitamente!</string>
-    <string name="scoreShow">"Punteggio = "</string>
+    <string name="scoreShow">"Punti = "</string>
     <string name="scoreboard_allcaps">CLASSIFICA</string>
     <string name="follow_us">SEGUICI</string>
     <string name="scoreSaved">Punteggio Salvato!</string>
@@ -23,4 +22,5 @@
     <string name="player_name">Nome Utente</string>
     <string name="playerName">Giocatore1</string>
     <string name="game">Gioco</string>
+    <string name="tvAboutText">Ciao, ti stai divertendo con il gioco? Lo spero :D! Siamo due studenti di ingegneria informatica del corso di Programmazione Mobile tenuto dal nostro amato professore Massimo Regoli e siamo stati lieti di rendere il nostro lavoro aperto al pubblico in modo che possa essere migliorato in futuro. Se ti interessa questo è il link</string>
 </resources>
