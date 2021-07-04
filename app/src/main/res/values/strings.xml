@@ -10,7 +10,7 @@
     <string name="scoreboard">Scoreboard</string>
     <string name="_defaultErr" translatable="false">0</string>
     <string name="errorsInfo">Errors = </string>
-    <string name="dateInfo" translatable="false"> mmm dd, yyyy</string>
+    <string name="dateInfo" translatable="false"> mm, dd, yyyy</string>
     <string name="timeInfo">Time = </string>
     <string name="defaultErrors" translatable="false">0</string>
     <string name="defaultTime" translatable="false">00.00.05</string>
