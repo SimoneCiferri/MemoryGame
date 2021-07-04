@@ -18,3 +18,4 @@ class ViewPagerAdapter(list:ArrayList<Fragment>, fm: FragmentManager, lifecycle:
     }
 
 }
+
