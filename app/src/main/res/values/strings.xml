@@ -43,5 +43,6 @@
     <string name="scoreSaved">Score Saved!</string>
     <string name="fillAllFieldsWarning">Please fill out all fields!</string>
     <string name="playerNameTooLong">Player name too long!!</string>
+    <string name="no_scores_saved">NO SCORES SAVED!!!</string>
 
 </resources>

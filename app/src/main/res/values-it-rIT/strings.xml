@@ -25,4 +25,5 @@
     <string name="tvAboutText">Ciao, ti stai divertendo con il nostro gioco? Lo spero :D! Siamo due studenti di ingegneria informatica del corso di Mobile Programming tenuto dal professore Massimo Regoli e siamo stati lieti di rendere il nostro lavoro aperto al pubblico in modo che possa essere migliorato in futuro. Se sei interessato questo è il link:</string>
     <string name="cup">coppa</string>
     <string name="mp2021">MOBILE PROGRAMMING 20/21</string>
+    <string name="no_scores_saved">Nessun Punteggio Salvato!</string>
 </resources>
