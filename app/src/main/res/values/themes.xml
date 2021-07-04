@@ -14,6 +14,6 @@
         <!-- Customize your theme here. -->
 
         <!-- Font Style. -->
-        <item name="android:fontFamily">@font/metal_slug_font1</item>
+        <item name="android:fontFamily">@font/main_font_mod</item>
     </style>
 </resources>
