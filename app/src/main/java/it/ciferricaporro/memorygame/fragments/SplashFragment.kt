@@ -12,6 +12,9 @@ import it.ciferricaporro.memorygame.R
 
 class SplashFragment : Fragment() {
 
+    private val tutorial = "Tutorial"
+    private val finish = "Finish"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,8 +37,8 @@ class SplashFragment : Fragment() {
     }
 
     private fun checkIfTut():Boolean{
-        val sharedPref = requireActivity().getSharedPreferences("Tutorial", Context.MODE_PRIVATE)
-        return sharedPref.getBoolean("Finish", false)
+        val sharedPref = requireActivity().getSharedPreferences(tutorial, Context.MODE_PRIVATE)
+        return sharedPref.getBoolean(finish, false)
     }
 
 
