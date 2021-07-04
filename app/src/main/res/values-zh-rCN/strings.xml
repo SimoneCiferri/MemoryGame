@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MemoryGame</string>
+    <string name="errorsInfo">"错误 = "</string>
+    <string name="timeInfo">"时间 = "</string>
+    <string name="playerName">玩家 1</string>
+    <string name="player_name">用户名</string>
+    <string name="aboutUs">我们是谁</string>
+    <string name="mp2021">移动编程</string>
+    <string name="match_the_cards_tutorial">匹配卡片</string>
+    <string name="save_your_score_tutorial">保存您的分数</string>
+    <string name="get_the_code_tutorial">免费获取代码</string>
+    <string name="cup">杯子</string>
+    <string name="scoreboard_allcaps">排行</string>
+    <string name="follow_us">跟着我们</string>
+    <string name="scoreSaved">正在保存</string>
+    <string name="fillAllFieldsWarning">请填写所有字段！</string>
+    <string name="playerNameTooLong">玩家名字太长！</string>
+    <string name="next">下一个</string>
+    <string name="finish">结束</string>
+    <string name="new_game">新游戏</string>
+    <string name="about">信息</string>
+    <string name="game">游戏</string>
+    <string name="scoreboard">排行</string>
+    <string name="scoreShow">"投票 = "</string>
+    <string name="save_score">保存投票</string>
+    <string name="tvAboutText">嗨，你喜欢我们的游戏吗？ 我希望如此：D！ 我们是 Massimo Regoli 教授举办的移动编程课程的两名计算机工程专业的学生，我们很高兴向公众开放我们的工作，以便将来可以改进。 如果你有兴趣，这是链接：</string>
+</resources>
