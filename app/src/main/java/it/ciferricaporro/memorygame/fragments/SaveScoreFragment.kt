@@ -43,7 +43,7 @@ class SaveScoreFragment : Fragment() {
 
         val etPlayerName = viewSC.findViewById<EditText>(R.id.etPlayerName)
         etPlayerName.doAfterTextChanged {
-            if(etPlayerName.text.toString().length > 10){
+            if(etPlayerName.text.toString().length > 6){
                 Toast.makeText(requireContext(), getString(R.string.playerNameTooLong), Toast.LENGTH_LONG).show()
                 etPlayerName.setText("")
             }

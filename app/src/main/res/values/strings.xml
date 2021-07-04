@@ -13,7 +13,7 @@
     <string name="dateInfo" translatable="false"> mmm dd, yyyy</string>
     <string name="timeInfo">Time = </string>
     <string name="defaultErrors" translatable="false">0</string>
-    <string name="defaultTime" translatable="false">00.05</string>
+    <string name="defaultTime" translatable="false">00.00.05</string>
     <string name="playerName">Player1</string>
     <string name="position" translatable="false">1</string>
     <string name="player_name">Player Name</string>
