@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         lateinit var binding: ActivityMainBinding
         lateinit var mp: MediaPlayer
-        val MP_STATE = "mpState"
         var mpState: Boolean = false
     }
 
@@ -59,10 +58,5 @@ class MainActivity : AppCompatActivity() {
         if(mpState){
             mp.start()
         }
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        outState.putBoolean(MP_STATE, mp.isPlaying)
-        super.onSaveInstanceState(outState)
     }
 }
