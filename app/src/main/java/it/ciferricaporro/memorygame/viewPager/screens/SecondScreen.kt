@@ -11,23 +11,37 @@ import android.widget.TextView
 import androidx.core.animation.doOnEnd
 import androidx.viewpager2.widget.ViewPager2
 import it.ciferricaporro.memorygame.R
+import it.ciferricaporro.memorygame.databinding.FragmentFirstScreenBinding
+import it.ciferricaporro.memorygame.databinding.FragmentSecondScreenBinding
 
 class SecondScreen : Fragment() {
+
+    private lateinit var binding: FragmentSecondScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val viewS = inflater.inflate(R.layout.fragment_second_screen, container, false)
+        //val viewS = inflater.inflate(R.layout.fragment_second_screen, container, false)
+        binding = FragmentSecondScreenBinding.inflate(layoutInflater, container, false)
+
         val viewP = activity?.findViewById<ViewPager2>(R.id.viewPager)
 
+        binding.tvNext2.setOnClickListener {
+
+            viewP?.currentItem=2
+
+        }
+        /*
         viewS.findViewById<TextView>(R.id.tvNext2).setOnClickListener {
 
             viewP?.currentItem=2
 
         }
-        return viewS
+        */
+        return binding.root
+        //return viewS
     }
 
 }
