@@ -32,11 +32,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setBottomNav()
         setOSTNow()
-
     }
 
     private fun setBottomNav(){
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val bottomNavigationView = binding.bottomNavigationView
         val navController = findNavController(R.id.fragment)
         bottomNavigationView.setupWithNavController(navController)
         bottomNavigationView.isVisible = false
