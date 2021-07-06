@@ -174,13 +174,13 @@ class MemoryGame : Fragment() {
         }
     }
 
-    private fun checkForMatch(indexOfSelectedCarrd: Int, position: Int, tvErr: TextView) {
-        if(cards[indexOfSelectedCarrd].ID == cards[position].ID){
+    private fun checkForMatch(indexOfSelectedCard: Int, position: Int, tvErr: TextView) {
+        if(cards[indexOfSelectedCard].ID == cards[position].ID){
             //Toast.makeText(this, "Match Found!!",Toast.LENGTH_LONG).show()
-            cards[indexOfSelectedCarrd].isMatched = true
+            cards[indexOfSelectedCard].isMatched = true
             cards[position].isMatched = true
             flipCard(buttons[position])
-            flipCard(buttons[indexOfSelectedCarrd])
+            flipCard(buttons[indexOfSelectedCard])
         }else{
             tvErr.text = (tvErr.text.toString().toInt() + 1).toString()
         }
