@@ -93,7 +93,6 @@ class MemoryGame : Fragment() {
                     zoom.setTarget(btnSaveScore)
                     zoom.start()
                     btnSaveScore.isVisible = true
-                    //Toast.makeText(this, "You Win!!", Toast.LENGTH_LONG).show()
                 }
             }
         }
