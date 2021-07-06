@@ -176,7 +176,6 @@ class MemoryGame : Fragment() {
 
     private fun checkForMatch(indexOfSelectedCard: Int, position: Int, tvErr: TextView) {
         if(cards[indexOfSelectedCard].ID == cards[position].ID){
-            //Toast.makeText(this, "Match Found!!",Toast.LENGTH_LONG).show()
             cards[indexOfSelectedCard].isMatched = true
             cards[position].isMatched = true
             flipCard(buttons[position])
