@@ -41,13 +41,13 @@ class MemoryGame : Fragment() {
     ): View? {
         //val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
         binding = FragmentMemoryGameBinding.inflate(layoutInflater, container, false)
-        bindingM.bottomNavigationView.isVisible = true
         setUiController()
         return binding.root
         //return viewMG
     }
 
     private fun setUiController(){
+        bindingM.bottomNavigationView.isVisible = true
         btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
         //tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
