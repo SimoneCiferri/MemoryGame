@@ -24,14 +24,14 @@ class MemoryGame : Fragment() {
     private lateinit var binding: FragmentMemoryGameBinding
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<Card>
-    private var indexOfSelectedCarrd: Int? = null
     private val images = mutableListOf(R.drawable.pikachu, R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar, R.drawable.squirtle, R.drawable.mew)
-    private lateinit var btnSaveScore: Button
-    private lateinit var tvErr: TextView
+    private var indexOfSelectedCarrd: Int? = null
     private var milliS: Long = 0
     private var milliStop: Long = 0
     private var timeInMill: Long = 0
     private lateinit var zoom: Animator
+    private lateinit var btnSaveScore: Button
+    private lateinit var tvErr: TextView
     //companion object OST giulio
     var ost = mp
 
