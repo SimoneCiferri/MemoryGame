@@ -24,7 +24,9 @@ class MemoryGame : Fragment() {
     private lateinit var binding: FragmentMemoryGameBinding
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<Card>
-    private val images = mutableListOf(R.drawable.pikachu, R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar, R.drawable.squirtle, R.drawable.mew)
+    private val images = mutableListOf(R.drawable.pikachu,
+            R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar,
+            R.drawable.squirtle, R.drawable.mew)
     private var indexOfSelectedCarrd: Int? = null
     private var milliS: Long = 0
     private var milliStop: Long = 0
@@ -48,11 +50,13 @@ class MemoryGame : Fragment() {
 
     private fun setUiController(){
         bindingM.bottomNavigationView.isVisible = true
+        images.addAll(images)
+
         btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
         //tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         tvErr = binding.tvErr
-        images.addAll(images)
+
         /*
         buttons = listOf(
                 viewMG.findViewById(R.id.imageButton2),
@@ -69,19 +73,10 @@ class MemoryGame : Fragment() {
                 viewMG.findViewById(R.id.imageButton14)
         )
         */
-        buttons = listOf(
-                binding.imageButton2,
-                binding.imageButton3,
-                binding.imageButton4,
-                binding.imageButton5,
-                binding.imageButton6,
-                binding.imageButton7,
-                binding.imageButton8,
-                binding.imageButton9,
-                binding.imageButton10,
-                binding.imageButton11,
-                binding.imageButton13,
-                binding.imageButton14
+        buttons = listOf(binding.imageButton2, binding.imageButton3, binding.imageButton4,
+                binding.imageButton5, binding.imageButton6, binding.imageButton7,
+                binding.imageButton8, binding.imageButton9, binding.imageButton10,
+                binding.imageButton11, binding.imageButton13, binding.imageButton14
         )
 
         for(btn in buttons){
