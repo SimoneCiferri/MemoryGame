@@ -10,17 +10,18 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
-import it.ciferricaporro.memorygame.MainActivity.Companion.binding
+import it.ciferricaporro.memorygame.MainActivity.Companion.bindingM
 import it.ciferricaporro.memorygame.MainActivity.Companion.mp
 import it.ciferricaporro.memorygame.MainActivity.Companion.mpState
 import it.ciferricaporro.memorygame.R
+import it.ciferricaporro.memorygame.databinding.FragmentMemoryGameBinding
 import it.ciferricaporro.memorygame.model.Card
 import kotlinx.android.synthetic.main.fragment_memory_game.*
-import kotlinx.coroutines.delay
 
 
 class MemoryGame : Fragment() {
 
+    private lateinit var binding: FragmentMemoryGameBinding
     private lateinit var buttons: List<ImageButton>
     private lateinit var cards: List<Card>
     private var indexOfSelectedCarrd: Int? = null
@@ -38,30 +39,49 @@ class MemoryGame : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
-        binding.bottomNavigationView.isVisible = true
-        setUiController(viewMG)
-        return viewMG
+        //val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
+        binding = FragmentMemoryGameBinding.inflate(layoutInflater, container, false)
+        bindingM.bottomNavigationView.isVisible = true
+        setUiController()
+        return binding.root
+        //return viewMG
     }
 
-    private fun setUiController(viewMG: View){
-        btnSaveScore = viewMG.findViewById<Button>(R.id.btnSaveScore)
-        tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
+    private fun setUiController(){
+        btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
+        //tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
+        tvErr = binding.tvErr
         images.addAll(images)
+        /*
         buttons = listOf(
-            viewMG.findViewById(R.id.imageButton2),
-            viewMG.findViewById(R.id.imageButton3),
-            viewMG.findViewById(R.id.imageButton4),
-            viewMG.findViewById(R.id.imageButton5),
-            viewMG.findViewById(R.id.imageButton6),
-            viewMG.findViewById(R.id.imageButton7),
-            viewMG.findViewById(R.id.imageButton8),
-            viewMG.findViewById(R.id.imageButton9),
-            viewMG.findViewById(R.id.imageButton10),
-            viewMG.findViewById(R.id.imageButton11),
+                viewMG.findViewById(R.id.imageButton2),
+                viewMG.findViewById(R.id.imageButton3),
+                viewMG.findViewById(R.id.imageButton4),
+                viewMG.findViewById(R.id.imageButton5),
+                viewMG.findViewById(R.id.imageButton6),
+                viewMG.findViewById(R.id.imageButton7),
+                viewMG.findViewById(R.id.imageButton8),
+                viewMG.findViewById(R.id.imageButton9),
+                viewMG.findViewById(R.id.imageButton10),
+                viewMG.findViewById(R.id.imageButton11),
                 viewMG.findViewById(R.id.imageButton13),
                 viewMG.findViewById(R.id.imageButton14)
+        )
+        */
+        buttons = listOf(
+                binding.imageButton2,
+                binding.imageButton3,
+                binding.imageButton4,
+                binding.imageButton5,
+                binding.imageButton6,
+                binding.imageButton7,
+                binding.imageButton8,
+                binding.imageButton9,
+                binding.imageButton10,
+                binding.imageButton11,
+                binding.imageButton13,
+                binding.imageButton14
         )
 
         for(btn in buttons){
@@ -83,7 +103,8 @@ class MemoryGame : Fragment() {
             }
         }
 
-        val btnStart = viewMG.findViewById<Button>(R.id.btnNewGame)
+        //val btnStart = viewMG.findViewById<Button>(R.id.btnNewGame)
+        val btnStart = binding.btnNewGame
         zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(btnStart)
         zoom.duration = 1000
@@ -91,13 +112,20 @@ class MemoryGame : Fragment() {
         btnStart.setOnClickListener {
             newGame()
         }
-
+        /*
         viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
             val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
             Navigation.findNavController(viewMG).navigate(navToSave)
         }
+        */
+        btnSaveScore.setOnClickListener {
+            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
+            Navigation.findNavController(binding.root).navigate(navToSave)
+        }
 
-        val ibVolume = viewMG.findViewById<ImageView>(R.id.imageAudio)
+
+        //val ibVolume = viewMG.findViewById<ImageView>(R.id.imageAudio)
+        val ibVolume = binding.imageAudio
         volumeIcSet(ibVolume)
         ibVolume.setOnClickListener{
             if (ost.isPlaying){
@@ -230,7 +258,4 @@ class MemoryGame : Fragment() {
             mpState = false
         }
     }
-
-
-
 }
