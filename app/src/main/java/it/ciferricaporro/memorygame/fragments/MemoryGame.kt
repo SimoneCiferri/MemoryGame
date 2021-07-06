@@ -214,7 +214,6 @@ class MemoryGame : Fragment() {
         indexOfSelectedCard = null
         updateViews()
         milliS = System.currentTimeMillis()
-        //btnSaveScore.isVisible = true
     }
 
     private fun getTime(): String{
