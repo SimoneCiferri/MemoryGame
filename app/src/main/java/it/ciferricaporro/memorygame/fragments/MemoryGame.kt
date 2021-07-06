@@ -27,7 +27,7 @@ class MemoryGame : Fragment() {
     private val images = mutableListOf(R.drawable.pikachu,
             R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar,
             R.drawable.squirtle, R.drawable.mew)
-    private var indexOfSelectedCarrd: Int? = null
+    private var indexOfSelectedCard: Int? = null
     private var milliS: Long = 0
     private var milliStop: Long = 0
     private var timeInMill: Long = 0
@@ -152,19 +152,16 @@ class MemoryGame : Fragment() {
 
     private fun updateModels(position:Int){
         val card = cards[position]
-
         if (card.isFaceUp){
             Toast.makeText(requireContext(), "invalid move!",Toast.LENGTH_SHORT).show()
             return
         }
-
-        if(indexOfSelectedCarrd==null){
+        if(indexOfSelectedCard==null){
             restoreCards()
-            indexOfSelectedCarrd = position
+            indexOfSelectedCard = position
         }else{
-            checkForMatch(indexOfSelectedCarrd!!, position, tvErr)
-            indexOfSelectedCarrd = null
-
+            checkForMatch(indexOfSelectedCard!!, position, tvErr)
+            indexOfSelectedCard = null
         }
         card.isFaceUp = !card.isFaceUp
     }
@@ -216,7 +213,7 @@ class MemoryGame : Fragment() {
         }
         tvErr.text = "0"
         btnSaveScore.isVisible = false
-        indexOfSelectedCarrd = null
+        indexOfSelectedCard = null
         updateViews()
         milliS = System.currentTimeMillis()
         //btnSaveScore.isVisible = true
