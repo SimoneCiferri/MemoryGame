@@ -42,33 +42,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivFirstScreen"
-        android:layout_width="312dp"
-        android:layout_height="607dp"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/first_tut"
+        android:layout_width="264dp"
+        android:layout_height="223dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
-        android:contentDescription="@string/match_the_cards_tutorial"
-        android:src="@drawable/first_tut"
+        android:src="@drawable/loading1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome1" />
-
-    <ImageView
-        android:id="@+id/ivFinger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/match_the_cards_tutorial"
-        android:src="@drawable/finger"
-        app:layout_constraintBottom_toBottomOf="@+id/ivFirstScreen"
-        app:layout_constraintEnd_toEndOf="@+id/ivFirstScreen"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/ivFirstScreen"
-        app:layout_constraintTop_toTopOf="@+id/ivFirstScreen"
-        app:layout_constraintVertical_bias="0.624" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
