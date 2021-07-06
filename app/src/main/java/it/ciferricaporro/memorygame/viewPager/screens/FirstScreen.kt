@@ -25,15 +25,15 @@ class FirstScreen : Fragment() {
         // Inflate the layout for this fragment
         //val viewF = inflater.inflate(R.layout.fragment_first_screen, container, false)
         binding = FragmentFirstScreenBinding.inflate(layoutInflater, container, false)
-        val fing = binding.ivFinger
+        //val fing = binding.ivFinger
         //val fing = viewF.findViewById<ImageView>(R.id.ivFinger)
-        val zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
+        /*val zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(fing)
         zoom.duration = 1000
         zoom.doOnEnd {
             zoom.start()
         }
-        zoom.start()
+        zoom.start()*/
 
         val viewP = activity?.findViewById<ViewPager2>(R.id.viewPager)
 
