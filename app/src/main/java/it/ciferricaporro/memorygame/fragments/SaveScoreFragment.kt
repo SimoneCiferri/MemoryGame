@@ -50,7 +50,7 @@ class SaveScoreFragment : Fragment() {
         binding.tvErrReview.text = getString(R.string.errorsInfo) + args.err.toString()
         binding.tvTimeReview.text = getString(R.string.timeInfo) + args.timeR
 
-        //nel caso fossero 8sec e 0 errori, bestTime, score = 15000
+
         score = (SCORE_CONSTANT/(args.timeInMillis/3 + 100*(args.err)))
 
         //viewSC.findViewById<TextView>(R.id.tvScore).text = getString(R.string.scoreShow) + score.toString()
