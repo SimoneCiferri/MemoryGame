@@ -6,13 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.UserViewModel
 import it.ciferricaporro.memorygame.databinding.FragmentScoreboardBinding
 import it.ciferricaporro.memorygame.recyclerView.ScoreboardAdapter
@@ -27,14 +24,10 @@ class ScoreboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentScoreboardBinding.inflate(layoutInflater, container, false)
-        //val viewSC = inflater.inflate(R.layout.fragment_scoreboard, container, false)
-
         //Recyclerview
         val adapter = ScoreboardAdapter()
         val recyclerView = binding.recyclerViewScore
-        //val recyclerView = viewSC.findViewById<RecyclerView>(R.id.recyclerViewScore)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -45,13 +38,11 @@ class ScoreboardFragment : Fragment() {
         })
 
         val tvNoScore = binding.tvNoScore
-        //val tvNoScore = viewSC.findViewById<TextView>(R.id.tvNoScore)
         Log.w("NAMO", userViewModel.getC().toString())
         if(userViewModel.getC() > 0){
             tvNoScore.isVisible = false
         }
         return binding.root
-        //return viewSC
     }
 
 

@@ -29,10 +29,7 @@ class SplashFragment : Fragment() {
                 val navToTut = SplashFragmentDirections.actionSplashFragmentToViewPagerFragment()
                 findNavController().navigate(navToTut)
             }
-
-
         }, 3000)
-        
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 

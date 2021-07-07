@@ -34,18 +34,15 @@ class MemoryGame : Fragment() {
     private lateinit var zoom: Animator
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
-    //companion object OST giulio
     var ost = mp
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //val viewMG = inflater.inflate(R.layout.fragment_memory_game, container, false)
         binding = FragmentMemoryGameBinding.inflate(layoutInflater, container, false)
         setUiController()
         return binding.root
-        //return viewMG
     }
 
     private fun setUiController(){
@@ -54,25 +51,8 @@ class MemoryGame : Fragment() {
 
         btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
-        //tvErr = viewMG.findViewById<TextView>(R.id.tvErr)
         tvErr = binding.tvErr
 
-        /*
-        buttons = listOf(
-                viewMG.findViewById(R.id.imageButton2),
-                viewMG.findViewById(R.id.imageButton3),
-                viewMG.findViewById(R.id.imageButton4),
-                viewMG.findViewById(R.id.imageButton5),
-                viewMG.findViewById(R.id.imageButton6),
-                viewMG.findViewById(R.id.imageButton7),
-                viewMG.findViewById(R.id.imageButton8),
-                viewMG.findViewById(R.id.imageButton9),
-                viewMG.findViewById(R.id.imageButton10),
-                viewMG.findViewById(R.id.imageButton11),
-                viewMG.findViewById(R.id.imageButton13),
-                viewMG.findViewById(R.id.imageButton14)
-        )
-        */
         buttons = listOf(binding.imageButton2, binding.imageButton3, binding.imageButton4,
                 binding.imageButton5, binding.imageButton6, binding.imageButton7,
                 binding.imageButton8, binding.imageButton9, binding.imageButton10,
@@ -97,7 +77,6 @@ class MemoryGame : Fragment() {
             }
         }
 
-        //val btnStart = viewMG.findViewById<Button>(R.id.btnNewGame)
         val btnStart = binding.btnNewGame
         zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(btnStart)
@@ -106,19 +85,12 @@ class MemoryGame : Fragment() {
         btnStart.setOnClickListener {
             newGame()
         }
-        /*
-        viewMG.findViewById<Button>(R.id.btnSaveScore).setOnClickListener {
-            val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
-            Navigation.findNavController(viewMG).navigate(navToSave)
-        }
-        */
+
         btnSaveScore.setOnClickListener {
             val navToSave = MemoryGameDirections.actionMemoryGameToSaveScoreFragment(tvErr.text.toString().toInt(), getTime(), timeInMill)
             Navigation.findNavController(binding.root).navigate(navToSave)
         }
 
-
-        //val ibVolume = viewMG.findViewById<ImageView>(R.id.imageAudio)
         val ibVolume = binding.imageAudio
         volumeIcSet(ibVolume)
         ibVolume.setOnClickListener{
@@ -190,7 +162,6 @@ class MemoryGame : Fragment() {
                 return false
             }
         }
-        //Toast.makeText(this, "All Matched!!",Toast.LENGTH_SHORT).show()
         return true
     }
 

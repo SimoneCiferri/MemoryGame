@@ -1,13 +1,10 @@
 package it.ciferricaporro.memorygame.data
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
-import kotlinx.coroutines.GlobalScope.coroutineContext
-import kotlin.coroutines.coroutineContext
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
