@@ -30,6 +30,4 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         return count
     }
 
-
-
 }
