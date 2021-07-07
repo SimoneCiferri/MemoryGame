@@ -30,32 +30,15 @@ class SaveScoreFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment.
-        //val viewSC = inflater.inflate(R.layout.fragment_save_score, container, false)
         binding = FragmentSaveScoreBinding.inflate(layoutInflater, container, false)
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        /*
-        viewSC.findViewById<Button>(R.id.btnSave).setOnClickListener {
-            insertDataToDB(viewSC)
-        }
-        */
        binding.btnSave.setOnClickListener {
             insertDataToDB()
         }
-        /*
-        viewSC.findViewById<TextView>(R.id.tvErrReview).text = getString(R.string.errorsInfo) + args.err.toString()
-        viewSC.findViewById<TextView>(R.id.tvTimeReview).text = getString(R.string.timeInfo) + args.timeR
-        */
         binding.tvErrReview.text = getString(R.string.errorsInfo) + args.err.toString()
         binding.tvTimeReview.text = getString(R.string.timeInfo) + args.timeR
-
-
         score = (scoreConstant/(args.timeInMillis/3 + 100*(args.err)))
-
-        //viewSC.findViewById<TextView>(R.id.tvScore).text = getString(R.string.scoreShow) + score.toString()
         binding.tvScore.text = getString(R.string.scoreShow) + score.toString()
-
-        //val etPlayerName = viewSC.findViewById<EditText>(R.id.etPlayerName)
         val etPlayerName = binding.etPlayerName
         etPlayerName.doAfterTextChanged {
             if(etPlayerName.text.toString().length > 6){
@@ -63,33 +46,9 @@ class SaveScoreFragment : Fragment() {
                 etPlayerName.setText("")
             }
         }
-
-        //return viewSC
         return binding.root
     }
-    /*
-    private fun insertDataToDB(viewSC:View) {
-        val playerName = viewSC.findViewById<EditText>(R.id.etPlayerName).text.toString()
-        val errs = args.err
-        val time = args.timeR
-        val scoreP =  score.toInt()
-        val achiev = checkAchievements(scoreP)
 
-        val calendar : java.util.Calendar = java.util.Calendar.getInstance()
-        val currentDate : String = DateFormat.getDateInstance().format(calendar.time)
-
-
-        if(inputCheck(playerName)){
-            val user = User(0, playerName, time, currentDate, errs, scoreP, achiev)
-            userViewModel.addUser(user)
-            Toast.makeText(requireContext(), getString(R.string.scoreSaved), Toast.LENGTH_LONG).show()
-            val navToScore = SaveScoreFragmentDirections.actionSaveScoreFragmentToScoreboardFragment()
-            Navigation.findNavController(viewSC).navigate(navToScore)
-        }else{
-            Toast.makeText(requireContext(), getString(R.string.fillAllFieldsWarning), Toast.LENGTH_LONG).show()
-        }
-    }
-    */
     private fun insertDataToDB() {
         val playerName = binding.etPlayerName.text.toString()
         val errs = args.err
@@ -111,7 +70,6 @@ class SaveScoreFragment : Fragment() {
             Toast.makeText(requireContext(), getString(R.string.fillAllFieldsWarning), Toast.LENGTH_LONG).show()
         }
     }
-
 
     private fun inputCheck(firstName: String) :Boolean{
         return !(TextUtils.isEmpty(firstName))
