@@ -1,5 +1,6 @@
 package it.ciferricaporro.memorygame.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -26,6 +27,7 @@ class SaveScoreFragment : Fragment() {
     private val scoreConstant: Int = 30000000
     private var score: Long = 0
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
