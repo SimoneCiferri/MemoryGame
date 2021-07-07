@@ -23,7 +23,7 @@ class SaveScoreFragment : Fragment() {
     private lateinit var binding: FragmentSaveScoreBinding
     private lateinit var userViewModel: UserViewModel
     private val args: SaveScoreFragmentArgs by navArgs()
-    private val scoreCostant: Int = 30000000
+    private val scoreConstant: Int = 30000000
     private var score: Long = 0
 
     override fun onCreateView(
@@ -50,7 +50,7 @@ class SaveScoreFragment : Fragment() {
         binding.tvTimeReview.text = getString(R.string.timeInfo) + args.timeR
 
 
-        score = (scoreCostant/(args.timeInMillis/3 + 100*(args.err)))
+        score = (scoreConstant/(args.timeInMillis/3 + 100*(args.err)))
 
         //viewSC.findViewById<TextView>(R.id.tvScore).text = getString(R.string.scoreShow) + score.toString()
         binding.tvScore.text = getString(R.string.scoreShow) + score.toString()
