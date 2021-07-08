@@ -45,5 +45,6 @@
     <string name="playerNameTooLong">Player name too long!!</string>
     <string name="no_scores_saved">NO SCORES SAVED!!!</string>
     <string name="invalid_move">invalid move!</string>
+    <string name="contact_us">CONTACT US</string>
 
 </resources>

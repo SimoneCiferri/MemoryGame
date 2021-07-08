@@ -27,4 +27,5 @@
     <string name="tvAboutText">嗨，你喜欢我们的游戏吗？ 我希望如此：D！ 我们是 Massimo Regoli 教授举办的移动编程课程的两名计算机工程专业的学生，我们很高兴向公众开放我们的工作，以便将来可以改进。 如果你有兴趣，这是链接：</string>
     <string name="no_scores_saved">沒有保存分數！</string>
     <string name="invalid_move">無效動作！</string>
+    <string name="contact_us">聯繫我們</string>
 </resources>
