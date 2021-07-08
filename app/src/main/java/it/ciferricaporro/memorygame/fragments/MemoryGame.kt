@@ -34,7 +34,7 @@ class MemoryGame : Fragment() {
     private lateinit var zoom: Animator
     private lateinit var btnSaveScore: Button
     private lateinit var tvErr: TextView
-    var ost = mp
+    private var ost = mp
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -123,7 +123,7 @@ class MemoryGame : Fragment() {
     private fun updateModels(position:Int){
         val card = cards[position]
         if (card.isFaceUp){
-            Toast.makeText(requireContext(), "invalid move!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.invalid_move),Toast.LENGTH_SHORT).show()
             return
         }
         if(indexOfSelectedCard==null){

@@ -44,5 +44,6 @@
     <string name="fillAllFieldsWarning">Please fill out all fields!</string>
     <string name="playerNameTooLong">Player name too long!!</string>
     <string name="no_scores_saved">NO SCORES SAVED!!!</string>
+    <string name="invalid_move">invalid move!</string>
 
 </resources>

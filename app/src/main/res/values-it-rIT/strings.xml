@@ -26,4 +26,5 @@
     <string name="cup">coppa</string>
     <string name="mp2021">MOBILE PROGRAMMING 20/21</string>
     <string name="no_scores_saved">Nessun Punteggio!</string>
+    <string name="invalid_move">Mossa non valida!</string>
 </resources>
