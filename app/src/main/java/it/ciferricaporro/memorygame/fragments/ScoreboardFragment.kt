@@ -38,7 +38,6 @@ class ScoreboardFragment : Fragment() {
         })
 
         val tvNoScore = binding.tvNoScore
-        Log.w("NAMO", userViewModel.getC().toString())
         if(userViewModel.getC() > 0){
             tvNoScore.isVisible = false
         }
