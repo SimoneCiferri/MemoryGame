@@ -48,7 +48,6 @@ class MemoryGame : Fragment() {
     private fun setUiController(){
         bindingM.bottomNavigationView.isVisible = true
         images.addAll(images)
-
         btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
         tvErr = binding.tvErr
