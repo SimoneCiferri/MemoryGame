@@ -17,9 +17,13 @@ class ViewPagerFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         binding = FragmentViewPagerBinding.inflate(layoutInflater, container, false)
+        setAdapter()
+        return binding.root
+    }
+
+    private fun setAdapter(){
         val fragmentList = arrayListOf( FirstScreen(), SecondScreen(), ThirdScreen() )
         val adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
         binding.viewPager.adapter = adapter
-        return binding.root
     }
 }
