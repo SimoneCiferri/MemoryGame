@@ -89,13 +89,13 @@ class SaveScoreFragment : Fragment() {
         if(score < 5500){
             return 0
         }
-        if(score > 5500 && score < 7000){
+        if(score in 5501..6999){
             return 1
         }
-        if(score > 7000 && score < 8500){
+        if(score in 7001..8499){
             return 2
         }
-        if(score > 8500 && score < 10000){
+        if(score in 8501..9999){
             return 3
         }
         else return 4
