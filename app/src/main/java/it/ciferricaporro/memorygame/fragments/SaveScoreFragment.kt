@@ -27,14 +27,22 @@ class SaveScoreFragment : Fragment() {
     private val scoreConstant: Int = 30000000
     private var score: Long = 0
 
-    @SuppressLint("SetTextI18n")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSaveScoreBinding.inflate(layoutInflater, container, false)
+        setUiController()
+        return binding.root
+    }
+
+
+    @SuppressLint("SetTextI18n")
+    private fun setUiController(){
+
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-       binding.btnSave.setOnClickListener {
+        binding.btnSave.setOnClickListener {
             insertDataToDB()
         }
         binding.tvErrReview.text = getString(R.string.errorsInfo) + args.err.toString()
@@ -48,8 +56,8 @@ class SaveScoreFragment : Fragment() {
                 etPlayerName.setText("")
             }
         }
-        return binding.root
     }
+
 
     private fun insertDataToDB() {
         val playerName = binding.etPlayerName.text.toString()
