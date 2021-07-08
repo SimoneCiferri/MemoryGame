@@ -25,23 +25,28 @@ class ScoreboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentScoreboardBinding.inflate(layoutInflater, container, false)
-        //Recyclerview
+        setRecyclerAndUserVM()
+        setUIController()
+        return binding.root
+    }
+
+    private fun setRecyclerAndUserVM(){
         val adapter = ScoreboardAdapter()
         val recyclerView = binding.recyclerViewScore
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        //UserViewModel
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         userViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
             adapter.setData(user)
         })
+    }
 
+    private fun setUIController(){
         val tvNoScore = binding.tvNoScore
         if(userViewModel.getC() > 0){
             tvNoScore.isVisible = false
         }
-        return binding.root
     }
 
 
