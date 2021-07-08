@@ -28,4 +28,5 @@
     <string name="no_scores_saved">沒有保存分數！</string>
     <string name="invalid_move">無效動作！</string>
     <string name="contact_us">聯繫我們</string>
+    <string name="feedback">反饋</string>
 </resources>

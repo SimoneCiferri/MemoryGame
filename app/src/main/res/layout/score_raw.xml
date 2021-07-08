@@ -134,6 +134,7 @@
             android:layout_height="49dp"
             android:layout_marginStart="210dp"
             android:layout_marginTop="15dp"
+            android:contentDescription="@string/star"
             app:srcCompat="@drawable/ach_star" />
 
         <ImageView
@@ -142,6 +143,7 @@
             android:layout_height="49dp"
             android:layout_marginStart="310dp"
             android:layout_marginTop="15dp"
+            android:contentDescription="@string/star"
             app:srcCompat="@drawable/ach_star" />
 
         <ImageView
@@ -150,6 +152,7 @@
             android:layout_height="49dp"
             android:layout_marginStart="260dp"
             android:layout_marginTop="15dp"
+            android:contentDescription="@string/star"
             app:srcCompat="@drawable/ach_star" />
 
         <ImageView
@@ -158,6 +161,7 @@
             android:layout_height="75dp"
             android:layout_marginStart="248dp"
             android:layout_marginTop="68dp"
+            android:contentDescription="@string/cup"
             android:visibility="invisible"
             app:srcCompat="@drawable/bestplayerita"
             tools:visibility="visible" />

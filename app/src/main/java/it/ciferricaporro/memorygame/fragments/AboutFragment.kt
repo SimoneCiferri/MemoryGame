@@ -44,6 +44,23 @@ class AboutFragment : Fragment() {
             startActivity(i)
         }
 
+        val tvFeed = binding.tvFeedback
+        tvFeed.setOnClickListener {
+            val i = Intent(Intent.ACTION_SENDTO)
+            i.data = Uri.parse(getString(R.string.email_intent_arg))
+            i.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback))
+            startActivity(i)
+        }
+
+        val ivFeed = binding.ivFeedback
+        ivFeed.setOnClickListener {
+            val i = Intent(Intent.ACTION_SENDTO)
+            i.data = Uri.parse(getString(R.string.email_intent_arg))
+            i.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.feedback))
+            startActivity(i)
+        }
+
+
         val ivFacCi = binding.ivFacebCiferri
         ivFacCi.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)

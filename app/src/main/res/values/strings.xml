@@ -46,5 +46,16 @@
     <string name="no_scores_saved">NO SCORES SAVED!!!</string>
     <string name="invalid_move">invalid move!</string>
     <string name="contact_us">CONTACT US</string>
+    <string name="email_intent_arg" translatable="false">mailto: memorygamefeedback@gmail.com</string>
+    <string name="feedback">Feedback</string>
+    <string name="memorygamefeedback_gmail_com" translatable="false">memorygamefeedback@gmail.com</string>
+    <string name="gmail_icon" translatable="false">gmailicon</string>
+    <string name="facebook_logo" translatable="false">facebookLogo</string>
+    <string name="instagram_logo" translatable="false">instagramLogo</string>
+    <string name="tutorial_background" translatable="false">tutorialBackground</string>
+    <string name="memory_icon" translatable="false">memoryIcon</string>
+    <string name="star" translatable="false">star</string>
+    <string name="audio_mode" translatable="false">audioMode</string>
+    <string name="card" translatable="false">card</string>
 
 </resources>

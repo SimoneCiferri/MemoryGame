@@ -14,6 +14,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
@@ -26,6 +27,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="8dp"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toStartOf="@+id/imageButton8"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
@@ -38,6 +40,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
@@ -49,6 +52,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
@@ -60,6 +64,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -72,6 +77,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="8dp"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toStartOf="@+id/imageButton7"
         app:layout_constraintHorizontal_bias="0.495"
@@ -85,6 +91,7 @@
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
@@ -96,6 +103,7 @@
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
@@ -107,6 +115,7 @@
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
@@ -118,6 +127,7 @@
         android:layout_marginStart="@dimen/memoryMargin"
         android:layout_marginTop="@dimen/memoryMargin"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -130,6 +140,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="8dp"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toStartOf="@+id/imageButton9"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
@@ -143,6 +154,7 @@
         android:layout_marginTop="@dimen/memoryMargin"
         android:layout_marginEnd="8dp"
         android:background="#00E6E0E0"
+        android:contentDescription="@string/card"
         android:src="@drawable/quesmark"
         app:layout_constraintEnd_toStartOf="@+id/imageButton10"
         app:layout_constraintStart_toEndOf="@+id/imageButton5"
@@ -194,6 +206,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
+        android:contentDescription="@string/audio_mode"
         android:src="@drawable/volume_up"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

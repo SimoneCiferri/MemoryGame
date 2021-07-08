@@ -84,9 +84,10 @@
         app:layout_constraintTop_toBottomOf="@+id/etPlayerName" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ivCupOnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/cup"
         android:src="@drawable/coppasave"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

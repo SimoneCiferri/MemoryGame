@@ -27,5 +27,6 @@
     <string name="mp2021">MOBILE PROGRAMMING 20/21</string>
     <string name="no_scores_saved">Nessun Punteggio!</string>
     <string name="invalid_move">Mossa non valida!</string>
-    <string name="contact_us">Contattaci</string>
+    <string name="contact_us">CONTATTACI</string>
+    <string name="feedback">Feedback</string>
 </resources>
