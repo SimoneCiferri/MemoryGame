@@ -4,22 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/tutback1"
     tools:context=".viewPager.screens.FirstScreen">
-
-    <ImageView
-        android:id="@+id/backgroundTut"
-        android:layout_width="850dp"
-        android:layout_height="1200dp"
-        android:contentDescription="@string/tutorial_background"
-        android:src="@drawable/sfondo_carbonio"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501" />
 
     <TextView
         android:id="@+id/tvWelcome1"
