@@ -23,6 +23,11 @@ class AboutFragment : Fragment() {
     ): View? {
 
         binding = FragmentAboutBinding.inflate(layoutInflater, container, false)
+        setUIController()
+        return binding.root
+    }
+
+    private fun setUIController(){
         val arrow = binding.ivArrow
         val zoom = AnimatorInflater.loadAnimator(requireContext(), R.animator.zoom)
         zoom.setTarget(arrow)
@@ -80,8 +85,6 @@ class AboutFragment : Fragment() {
             i.data = Uri.parse(getString(R.string.gitLinkCaporro))
             startActivity(i)
         }
-
-        return binding.root
     }
 
 }
