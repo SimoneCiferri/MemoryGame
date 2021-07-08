@@ -21,12 +21,16 @@ class ThirdScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentThirdScreenBinding.inflate(layoutInflater, container, false)
+        setUiController()
+        return binding.root
+    }
+
+    private fun setUiController(){
         binding.tvFinish.setOnClickListener {
             val navToGame = ViewPagerFragmentDirections.actionViewPagerFragmentToMemoryGame()
             Navigation.findNavController(binding.root).navigate(navToGame)
             onTutFinished()
         }
-        return binding.root
     }
 
     private fun onTutFinished(){

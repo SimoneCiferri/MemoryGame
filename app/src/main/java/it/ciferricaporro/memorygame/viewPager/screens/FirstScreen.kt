@@ -18,10 +18,14 @@ class FirstScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFirstScreenBinding.inflate(layoutInflater, container, false)
+        setUiController()
+        return binding.root
+    }
+
+    private fun setUiController(){
         val viewP = activity?.findViewById<ViewPager2>(R.id.viewPager)
         binding.tvNext.setOnClickListener {
             viewP?.currentItem=1
         }
-        return binding.root
     }
 }
