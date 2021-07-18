@@ -19,7 +19,6 @@ import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
 import it.ciferricaporro.memorygame.databinding.FragmentSaveScoreBinding
-import kotlinx.android.synthetic.*
 import java.text.DateFormat
 
 
