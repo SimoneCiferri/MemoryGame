@@ -1,12 +1,15 @@
 package it.ciferricaporro.memorygame.fragments
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.ViewModelProvider
@@ -16,6 +19,7 @@ import it.ciferricaporro.memorygame.R
 import it.ciferricaporro.memorygame.data.User
 import it.ciferricaporro.memorygame.data.UserViewModel
 import it.ciferricaporro.memorygame.databinding.FragmentSaveScoreBinding
+import kotlinx.android.synthetic.*
 import java.text.DateFormat
 
 
@@ -44,6 +48,8 @@ class SaveScoreFragment : Fragment() {
         userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         binding.btnSave.setOnClickListener {
             insertDataToDB()
+            val editTextXml = binding.etPlayerName
+            closeSoftKeyboard(requireContext(), editTextXml)
         }
         binding.tvErrReview.text = getString(R.string.errorsInfo) + args.err.toString()
         binding.tvTimeReview.text = getString(R.string.timeInfo) + args.timeR
@@ -101,4 +107,10 @@ class SaveScoreFragment : Fragment() {
         else return 4
     }
 
+    private fun closeSoftKeyboard(context: Context, v: View) {
+        val iMm = context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        iMm.hideSoftInputFromWindow(v.windowToken, 0)
+        v.clearFocus()
+    }
 }
+
