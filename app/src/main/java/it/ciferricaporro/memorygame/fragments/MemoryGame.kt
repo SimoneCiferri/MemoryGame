@@ -26,6 +26,8 @@ class MemoryGame : Fragment() {
     private lateinit var cards: List<Card>
     private val images = mutableListOf(R.drawable.pikachu,
             R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar,
+            R.drawable.squirtle, R.drawable.mew, R.drawable.pikachu,
+            R.drawable.bulbasaur, R.drawable.charmander, R.drawable.gengar,
             R.drawable.squirtle, R.drawable.mew)
     private var indexOfSelectedCard: Int? = null
     private var milliS: Long = 0
@@ -47,7 +49,6 @@ class MemoryGame : Fragment() {
 
     private fun setUiController(){
         bindingM.bottomNavigationView.isVisible = true
-        images.addAll(images)
         btnSaveScore = binding.btnSaveScore
         btnSaveScore.isVisible = false
         tvErr = binding.tvErr
